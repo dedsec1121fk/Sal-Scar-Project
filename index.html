@@ -316,11 +316,10 @@
         </div>
 
         <div class="grid-2">
+        <div class="grid-2 contact-grid">
           <article class="card">
             <h3 data-i18n="contact_h3">Email</h3>
-            <p class="muted" data-i18n="contact_p">
-              The fastest way to reach me:
-            </p>
+            <p class="muted" data-i18n="contact_p">The fastest way to reach me:</p>
             <p class="mono">
               <a href="mailto:tsalscar@gmail.com">tsalscar@gmail.com</a>
             </p>
@@ -333,33 +332,27 @@
               <li data-i18n="contact_li_2">Environment (prod, staging, test accounts)</li>
               <li data-i18n="contact_li_3">Desired output (report, retest, workshop)</li>
             </ul>
+
+            <div class="divider" role="presentation"></div>
+
+            <a class="btn" href="mailto:tsalscar@gmail.com?subject=Security%20Assessment%20Request" data-i18n="cta_email">Email me</a>
           </article>
 
-          <form class="card form" id="contactForm">
-            <h3 data-i18n="form_title">Quick message</h3>
-            <p class="muted" data-i18n="form_hint">
-              This form opens your mail app (no backend). Nothing is stored.
+          <article class="card">
+            <h3 data-i18n="availability_title">Availability</h3>
+            <p class="muted" data-i18n="availability_text">
+              I can usually start within 1–2 weeks depending on scope. Fast-turn retests are available when fixes are ready.
             </p>
-
-            <label class="field">
-              <span data-i18n="form_name">Name</span>
-              <input type="text" id="name" autocomplete="name" placeholder="Your name" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="form_subject">Subject</span>
-              <input type="text" id="subject" autocomplete="off" placeholder="Pen test request" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="form_message">Message</span>
-              <textarea id="message" rows="5" placeholder="Tell me about the target, scope, and timeline."></textarea>
-            </label>
-
-            <button class="btn" type="submit" data-i18n="form_send">Create email</button>
-            <p class="micro muted" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
+            <div class="divider" role="presentation"></div>
+            <p class="label" data-i18n="deliverables_title">Deliverables</p>
+            <ul class="list">
+              <li data-i18n="deliv_li_1">Executive summary + technical details</li>
+              <li data-i18n="deliv_li_2">Reproduction steps and evidence</li>
+              <li data-i18n="deliv_li_3">Remediation guidance and retest notes</li>
+            </ul>
+          </article>
         </div>
+</div>
       </div>
     </section>
   </main>

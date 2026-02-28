@@ -340,3 +340,74 @@ textarea{resize: vertical; min-height: 120px}
   .card, .metric, .chip{break-inside: avoid}
   body{background:#fff; color:#000}
 }
+
+
+/* --- Mobile / iOS polish --- */
+:root{
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+body{
+  padding-bottom: var(--safe-bottom);
+}
+
+.site-header{
+  padding-top: var(--safe-top);
+}
+
+.header-inner{
+  flex-wrap: wrap;
+}
+
+.controls{
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav a, .mobile-menu a, .btn{
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn{
+  min-height: 44px; /* iOS recommended tap target */
+}
+
+.mobile-menu .container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .35rem .8rem;
+}
+
+.mobile-menu a{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: .75rem .75rem;
+  background: var(--card);
+}
+
+@media (max-width: 520px){
+  .hero{padding-top: 2.4rem}
+  .hero-metrics{grid-template-columns: 1fr; }
+  .section-head{flex-direction: column; align-items:flex-start}
+  .grid-2, .grid-3{grid-template-columns: 1fr}
+  .mobile-menu .container{grid-template-columns: 1fr}
+  .brand{min-width: unset}
+  .controls{width:100%; justify-content:space-between}
+  .controls .btn{flex: 1}
+}
+
+@media (min-width: 981px){
+  .controls{justify-content:flex-end}
+}
+
+/* Better readability on very large screens */
+@media (min-width: 1300px){
+  .lead{font-size: 1.12rem}
+  .card{padding: 1.15rem 1.25rem}
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce){
+  *{scroll-behavior: auto !important}
+}

@@ -130,6 +130,14 @@ const i18n = {
 
     status_empty: "Add a subject and message first.",
     status_opening: "Opening your mail app…",
+cta_email: "Email me",
+    availability_title: "Availability",
+    availability_text: "I can usually start within 1–2 weeks depending on scope. Fast-turn retests are available when fixes are ready.",
+    deliverables_title: "Deliverables",
+    deliv_li_1: "Executive summary + technical details",
+    deliv_li_2: "Reproduction steps and evidence",
+    deliv_li_3: "Remediation guidance and retest notes",
+
   },
 
   // “Bahama language” — commonly refers to Bahamian Creole / Bahamian Dialect.
@@ -263,6 +271,14 @@ const i18n = {
 
     status_empty: "Put subject an’ message first.",
     status_opening: "Openin’ ya mail app…",
+cta_email: "Email me",
+    availability_title: "Availability",
+    availability_text: "I can usually start in 1–2 weeks dependin’ on scope. Fast retests available when fixes ready.",
+    deliverables_title: "Deliverables",
+    deliv_li_1: "Exec summary plus technical details",
+    deliv_li_2: "Steps fi reproduce an’ evidence",
+    deliv_li_3: "Fix guidance an’ retest notes",
+
   }
 };
 
@@ -313,15 +329,6 @@ function applyI18n(lang){
     const value = (i18n[lang] && i18n[lang][key]) ? i18n[lang][key] : (i18n.en[key] || "");
     el.textContent = value;
   });
-
-  // Update placeholders for form fields
-  const name = qs("#name");
-  const subject = qs("#subject");
-  const message = qs("#message");
-  if(name) name.placeholder = (lang === "en") ? "Your name" : "Ya name";
-  if(subject) subject.placeholder = (lang === "en") ? "Pen test request" : "Pen test request";
-  if(message) message.placeholder = (lang === "en") ? "Tell me about the target, scope, and timeline." : "Tell me ’bout di target, scope, an’ timeline.";
-
   // Update document language
   document.documentElement.lang = (lang === "en") ? "en" : "en-BS";
 }
@@ -354,23 +361,6 @@ function setupMenu(){
   });
 }
 
-function setupContactForm(){
-  const form = qs("#contactForm");
-  const status = qs("#formStatus");
-  if(!form) return;
-
-  form.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    const lang = getLang();
-    const name = (qs("#name")?.value || "").trim();
-    const subject = (qs("#subject")?.value || "").trim();
-    const message = (qs("#message")?.value || "").trim();
-
-    if(!subject || !message){
-      if(status) status.textContent = i18n[lang].status_empty;
-      return;
-    }
-
     if(status) status.textContent = i18n[lang].status_opening;
 
     const body = `${name ? (name + "\n\n") : ""}${message}`;
@@ -401,7 +391,6 @@ function init(){
   });
 
   setupMenu();
-  setupContactForm();
 }
 
 document.addEventListener("DOMContentLoaded", init);
