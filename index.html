@@ -1,237 +1,381 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark" data-lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Sal Scar — CyberOps Portfolio</title>
-<meta content="Portfolio website — CyberOps Consultant. Experience, certifications, skills, and contact." name="description"/>
-<link href="./style.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Sal Scar — CyberOps Consultant</title>
+  <meta name="description" content="Black & white portfolio. CyberOps Consultant specializing in offensive security: web, mobile, network and API testing." />
+  <link rel="preconnect" href="." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-<a class="skip-link" data-i18n="skip_to_content" href="#main">Skip to content</a>
-<header class="topbar">
-<div class="container">
-<div class="row">
-<div aria-label="Site brand" class="brand">
-<div style="min-width:0">
-<h1>Sal Scar</h1>
-<p data-i18n="brand_role">CyberOps Consultant</p>
-</div>
-</div>
-<nav aria-label="Primary" class="nav">
-<a data-i18n="nav_about" href="#about">About</a>
-<a data-i18n="nav_experience" href="#experience">Experience</a>
-<a data-i18n="nav_certs" href="#certs">Certifications</a>
-<a data-i18n="nav_skills" href="#skills">Skills</a>
-<a data-i18n="nav_contact" href="#contact">Contact</a>
-</nav>
-<div class="actions">
-<button aria-label="Toggle theme" class="btn icon-btn" id="themeBtn" title="Toggle theme">🌙</button>
-<button aria-label="Toggle language" class="btn" id="langBtn" title="Toggle language">Bahasa</button>
-</div>
-</div>
-</div>
-</header>
-<main id="main">
-<section class="hero">
-<div class="container">
-<div class="hero-grid">
-<div class="card glass reveal">
-<div class="card-inner">
-<div class="kicker"><b>OSCP</b><span>•</span><span>CRTO</span><span>•</span><span>ISO27001 Lead Auditor</span></div>
-<h2 data-i18n="hero_title">Offensive security work with clean reporting and real-world impact.</h2>
-<p>
-<span data-i18n="hero_desc">I perform Web, Mobile (Android &amp; iOS), Network, and API penetration testing and vulnerability assessment,
-                plus mobile static analysis. I deliver detailed technical reports and present findings to clients.</span>
-</p>
-<div class="hero-cta">
-<a class="btn primary" data-i18n="btn_get_in_touch" href="#contact">Get in touch</a>
-<button class="btn" data-i18n="btn_copy_email" id="copyEmailBtn" type="button">Copy email</button>
-<a class="btn" data-i18n="btn_see_experience" href="#experience">See experience</a>
-</div>
-<p class="small" style="margin-top:14px"><span data-i18n="tip_static">Tip: this site is fully static (HTML/CSS/JS) and works offline.</span></p>
-</div>
-</div>
-<aside aria-label="Profile summary" class="card glass reveal">
-<div class="card-inner mini-profile">
-<div style="display:flex; align-items:center; gap:10px">
-<div>
-<div style="font-family: var(--font-secondary, system-ui); font-size: 1.05rem; color: var(--nm-text-accent);">Sal Scar</div>
-<div class="meta" data-i18n="profile_meta">CyberOps Consultant • Offensive Security</div>
-</div>
-</div>
-<div aria-label="Highlights" class="badge-row">
-<div class="badge" data-i18n="badge_webapi">Web / API PT</div>
-<div class="badge" data-i18n="badge_mobile">Mobile PT (Android/iOS)</div>
-<div class="badge" data-i18n="badge_network">Network VA/PT</div>
-<div class="badge" data-i18n="badge_reporting">Reporting</div>
-</div>
-<div class="card" style="background: var(--nm-menu-solid); border-color: var(--nm-border);">
-<div class="card-inner" style="padding:16px">
-<div class="meta" data-i18n="quick_links">Quick links</div>
-<div class="pills" style="margin-top:10px">
-<a class="pill" data-i18n="nav_certs" href="#certs">Certifications</a>
-<a class="pill" data-i18n="nav_skills" href="#skills">Skills</a>
-</div>
-</div>
-</div>
-<div class="card" style="background: var(--nm-menu-solid); border-color: var(--nm-border);">
-<div class="card-inner" style="padding:16px">
-<div class="meta" data-i18n="contact_label">Contact</div>
-<div style="margin-top:8px; font-family: var(--font-mono, ui-monospace);">
-<span id="emailText">tsalscar@gmail.com</span>
-</div>
-</div>
-</div>
-</div>
-</aside>
-</div>
-</div>
-</section>
-<section class="section" id="about">
-<div class="container">
-<div class="card glass reveal">
-<div class="card-inner">
-<h3 data-i18n="h_about">About</h3>
-<div class="split">
-<div>
-<p data-i18n="about_body">
-                  CyberOps Consultant with a background in Information Technology security, specializing in offensive work.
-                  I focus on practical testing, reproducible findings, and clear remediation guidance.
-                </p>
-<p class="small">
-<span data-i18n="about_note">You can replace the name, role, and content with your own details in <b>index.html</b>.</span>
-</p>
-</div>
-<div aria-label="Focus areas" class="pills">
-<span class="pill" data-i18n="pill_about_web">Web Pentesting</span>
-<span class="pill" data-i18n="pill_about_mobile">Mobile (Android/iOS)</span>
-<span class="pill" data-i18n="pill_about_network">Network Pentesting</span>
-<span class="pill" data-i18n="pill_about_api">API Security</span>
-<span class="pill" data-i18n="pill_about_static">Static Analysis</span>
-<span class="pill" data-i18n="pill_about_reporting">Client Reporting</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="section" id="experience">
-<div class="container">
-<h3 class="reveal" data-i18n="h_experience" style="margin-bottom:12px">Experience</h3>
-<div class="grid">
-<article class="card glass item col-12 reveal">
-<h4 data-i18n="exp1_title">CyberOps Consultant</h4>
-<div class="meta" data-i18n="exp1_time">Oct 2021 — Present</div>
-<p>
-<span data-i18n="exp1_desc">Perform Web, Mobile (Android &amp; iOS), Network and API penetration testing and vulnerability assessment.
-              Perform static analysis on mobile devices. Prepare detailed technical reports and communicate findings to clients.</span>
-</p>
-</article>
-<article class="card glass item col-6 reveal">
-<h4 data-i18n="exp2_title">IT Security Engineer</h4>
-<div class="meta" data-i18n="exp2_time">Jun 2020 — Sep 2021</div>
-<p>
-<span data-i18n="exp2_desc">Performed Web and Mobile penetration testing and vulnerability assessments. Conducted source code monitoring
-              to identify sensitive information, compiled monthly incident reports, and validated bug bounty submissions.</span>
-</p>
-</article>
-<article class="card glass item col-6 reveal">
-<h4 data-i18n="exp3_title">Cyber Security Analyst Intern</h4>
-<div class="meta" data-i18n="exp3_time">Feb 2019 — Feb 2020</div>
-<p>
-<span data-i18n="exp3_desc">Investigated digital cases using forensic tools and supported vulnerability assessments and pentests.
-              Researched collaboration strategies between Blue Team and Red Team.</span>
-</p>
-</article>
-</div>
-</div>
-</section>
-<section class="section" id="certs">
-<div class="container">
-<h3 class="reveal" data-i18n="h_certs">Certifications</h3>
-<div class="grid">
-<div class="card glass item col-4 reveal">
-<h4>OSCP</h4>
-<div class="meta" data-i18n="cert_oscp_meta">OffSec • Issued Jul 2024</div>
-<p data-i18n="cert_oscp_desc">Offensive Security Certified Professional.</p>
-</div>
-<div class="card glass item col-4 reveal">
-<h4>CRTO</h4>
-<div class="meta" data-i18n="cert_crto_meta">Zero-Point Security • Issued Dec 2024</div>
-<p data-i18n="cert_crto_desc">Certified Red Team Operator.</p>
-</div>
-<div class="card glass item col-4 reveal">
-<h4>ISO/IEC 27001 Lead Auditor</h4>
-<div class="meta" data-i18n="cert_iso_meta">IRCA • Issued Jul 2022</div>
-<p data-i18n="cert_iso_desc">Certified ISO/IEC 27001:2013 Lead Auditor (ISO27001).</p>
-</div>
-<div class="card glass item col-6 reveal">
-<h4>CEH</h4>
-<div class="meta" data-i18n="cert_ceh_meta">EC-Council • Issued Jul 2020</div>
-<p data-i18n="cert_ceh_desc">Certified Ethical Hacker.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="section" id="skills">
-<div class="container">
-<h3 class="reveal" data-i18n="h_skills">Skills</h3>
-<div class="grid">
-<div class="card glass item col-8 reveal">
-<h4 data-i18n="skills_tooling">Tooling</h4>
-<p class="pills">
-<span class="pill" data-i18n="pill_tool_burp">Burp Suite</span>
-<span class="pill" data-i18n="pill_tool_postman">Postman</span>
-<span class="pill" data-i18n="pill_tool_nessus">Nessus</span>
-<span class="pill" data-i18n="pill_tool_frida">Frida</span>
-<span class="pill" data-i18n="pill_tool_objection">Objection</span>
-<span class="pill" data-i18n="pill_static">Mobile Static Analysis</span>
-<span class="pill" data-i18n="pill_reporting">Technical Reporting</span>
-</p>
-</div>
-<div class="card glass item col-4 reveal">
-<h4 data-i18n="skills_deliver_title">What I deliver</h4>
-<p data-i18n="skills_deliver_desc">
-              Clear issues, evidence, impact, and remediation steps — optimized for engineers and stakeholders.
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Site brand">
+        <span class="brand-mark" aria-hidden="true">■</span>
+        <span class="brand-text" data-i18n="brand">SAL SCAR</span>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#certs" data-i18n="nav_certs">Certifications</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button class="btn ghost" id="langToggle" type="button" aria-label="Switch language">
+          <span class="btn-icon" aria-hidden="true">⌁</span>
+          <span class="btn-label" id="langLabel">Bahamas</span>
+        </button>
+
+        <button class="btn" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span class="btn-icon" id="themeIcon" aria-hidden="true">◐</span>
+          <span class="btn-label" id="themeLabel" data-i18n="theme_dark">Dark</span>
+        </button>
+
+        <button class="btn ghost" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="btn-icon" aria-hidden="true">≡</span>
+          <span class="btn-label" data-i18n="menu">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="container">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#certs" data-i18n="nav_certs">Certifications</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">CYBEROPS CONSULTANT</p>
+          <h1 class="headline">
+            <span data-i18n="hero_h1_a">Offensive security</span><br />
+            <span class="headline-accent" data-i18n="hero_h1_b">that is clear, practical, and report-ready.</span>
+          </h1>
+          <p class="lead" data-i18n="hero_lead">
+            Web, Mobile (Android &amp; iOS), Network and API penetration testing &amp; vulnerability assessment—plus
+            mobile static analysis and detailed technical reporting.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#contact" data-i18n="cta_contact">Contact</a>
+            <a class="btn ghost" href="#experience" data-i18n="cta_viewwork">View work</a>
+          </div>
+
+          <dl class="hero-metrics" aria-label="Highlights">
+            <div class="metric">
+              <dt data-i18n="m_years_label">Experience</dt>
+              <dd data-i18n="m_years_value">2019 — Present</dd>
+            </div>
+            <div class="metric">
+              <dt data-i18n="m_focus_label">Focus</dt>
+              <dd data-i18n="m_focus_value">Offensive Security</dd>
+            </div>
+            <div class="metric">
+              <dt data-i18n="m_reports_label">Deliverable</dt>
+              <dd data-i18n="m_reports_value">Actionable Reports</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-card" aria-label="Quick profile">
+          <div class="card">
+            <div class="card-top">
+              <p class="card-title" data-i18n="card_title">Profile</p>
+              <p class="card-subtitle" data-i18n="card_subtitle">CyberOps Consultant — Offensive Work</p>
+            </div>
+
+            <div class="card-body">
+              <p class="muted" data-i18n="profile_text">
+                I’m a CyberOps Consultant with a background in Information Technology security, specializing in offensive
+                work experience.
+              </p>
+
+              <div class="divider" role="presentation"></div>
+
+              <p class="label" data-i18n="contact_label">How to reach me</p>
+              <p class="mono">
+                <a href="mailto:tsalscar@gmail.com">tsalscar@gmail.com</a>
+              </p>
+
+              <div class="divider" role="presentation"></div>
+
+              <p class="label" data-i18n="signature_label">Signature</p>
+              <p class="mono">Sal Scar · CyberOps</p>
+            </div>
+          </div>
+          <p class="micro muted" data-i18n="no_images_note">
+            No images. No logos. Just black &amp; white — built for speed, clarity, and credibility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="about_title">About</h2>
+          <p class="muted" data-i18n="about_subtitle">
+            What I do, how I work, and what you can expect when we collaborate.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3 data-i18n="about_h3_1">Engagements</h3>
+            <p data-i18n="about_p_1">
+              I perform penetration testing and vulnerability assessments across web applications, APIs, mobile apps
+              (Android &amp; iOS), and networks. I also perform static analysis on mobile devices when needed.
             </p>
-</div>
-<div class="card glass item col-12 reveal">
-<h4 data-i18n="skills_areas_title">Core capabilities</h4>
-<p class="pills" style="margin:0">
-<span class="pill" data-i18n="pill_webapi">Web &amp; API Penetration Testing</span>
-<span class="pill" data-i18n="pill_mobile">Mobile PT (Android/iOS)</span>
-<span class="pill" data-i18n="pill_network">Network Penetration Testing</span>
-<span class="pill" data-i18n="pill_va">Vulnerability Assessment</span>
-<span class="pill" data-i18n="pill_code">Source Code Review / Monitoring</span>
-<span class="pill" data-i18n="pill_bug_bounty">Bug Bounty Validation</span>
-<span class="pill" data-i18n="pill_forensics">Digital Forensics (basic)</span>
-<span class="pill" data-i18n="pill_client">Client Communication</span>
-</p>
-</div>
-</div>
-</div>
-</section>
-<section class="section" id="contact">
-<div class="container">
-<h3 class="reveal" data-i18n="h_contact">Contact</h3>
-<div class="grid">
-<div class="card glass item col-12 reveal">
-<h4 data-i18n="contact_reach_me">Reach me</h4>
-<p class="meta" data-i18n="contact_email_label">Email</p>
-<p style="margin-top:6px; font-family: var(--font-mono, ui-monospace); font-size: 0.95rem;">
-<span id="emailText2">tsalscar@gmail.com</span>
-</p>
-<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
-<button class="btn primary" data-i18n="btn_copy_email" id="copyEmailBtn2" type="button">Copy email</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<div aria-live="polite" class="toast" id="toast" role="status"></div>
-<script src="./script.js"></script>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="about_h3_2">Reporting &amp; communication</h3>
+            <p data-i18n="about_p_2">
+              I prepare detailed technical reports and present findings clearly—so teams can prioritize fixes, validate
+              remediation, and reduce risk without guesswork.
+            </p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <p class="callout-title" data-i18n="callout_title">Approach</p>
+          <p class="callout-text" data-i18n="callout_text">
+            I focus on real-world impact, reproducible steps, and evidence-backed severity—so every finding is useful,
+            not noisy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="skills_title">Skills &amp; tools</h2>
+          <p class="muted" data-i18n="skills_subtitle">
+            A focused toolkit for testing, validation, and client-ready delivery.
+          </p>
+        </div>
+
+        <div class="chips" aria-label="Skills list">
+          <span class="chip">Burp Suite</span>
+          <span class="chip">Postman</span>
+          <span class="chip">Nessus</span>
+          <span class="chip">Frida</span>
+          <span class="chip">Objection</span>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3 data-i18n="skills_h3_1">Web &amp; API</h3>
+            <ul class="list">
+              <li data-i18n="skills_li_1">Manual testing with targeted validation</li>
+              <li data-i18n="skills_li_2">Authentication &amp; authorization review</li>
+              <li data-i18n="skills_li_3">Request/response analysis and evidence capture</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="skills_h3_2">Mobile</h3>
+            <ul class="list">
+              <li data-i18n="skills_li_4">Android &amp; iOS penetration testing</li>
+              <li data-i18n="skills_li_5">Static analysis and security review</li>
+              <li data-i18n="skills_li_6">Runtime instrumentation when required</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="skills_h3_3">Delivery</h3>
+            <ul class="list">
+              <li data-i18n="skills_li_7">Clear severity and remediation guidance</li>
+              <li data-i18n="skills_li_8">Executive summary + technical detail</li>
+              <li data-i18n="skills_li_9">Stakeholder-ready presentations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="exp_title">Experience</h2>
+          <p class="muted" data-i18n="exp_subtitle">
+            A track record of offensive security work with client-facing communication.
+          </p>
+        </div>
+
+        <div class="timeline" role="list">
+          <div class="tl-item" role="listitem">
+            <div class="tl-meta">
+              <p class="tl-role" data-i18n="exp_role_1">CyberOps Consultant</p>
+              <p class="tl-time" data-i18n="exp_time_1">Oct 2021 — Present</p>
+            </div>
+            <div class="tl-body card">
+              <ul class="list">
+                <li data-i18n="exp1_li_1">Perform Web, Mobile (Android &amp; iOS), Network and API penetration testing and VA.</li>
+                <li data-i18n="exp1_li_2">Perform static analysis on mobile devices.</li>
+                <li data-i18n="exp1_li_3">Prepare detailed technical reports based on results.</li>
+                <li data-i18n="exp1_li_4">Communicate and present findings to clients.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-meta">
+              <p class="tl-role" data-i18n="exp_role_2">IT Security Engineer</p>
+              <p class="tl-time" data-i18n="exp_time_2">Jun 2020 — Sep 2021</p>
+            </div>
+            <div class="tl-body card">
+              <ul class="list">
+                <li data-i18n="exp2_li_1">Perform Web and Mobile penetration testing and vulnerability assessment.</li>
+                <li data-i18n="exp2_li_2">Monitor source code to identify and safeguard sensitive information.</li>
+                <li data-i18n="exp2_li_3">Compile monthly reports on security incidents.</li>
+                <li data-i18n="exp2_li_4">Validate bug bounty submissions.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-meta">
+              <p class="tl-role" data-i18n="exp_role_3">Cyber Security Analyst Intern</p>
+              <p class="tl-time" data-i18n="exp_time_3">Feb 2019 — Feb 2020</p>
+            </div>
+            <div class="tl-body card">
+              <ul class="list">
+                <li data-i18n="exp3_li_1">Investigate digital cases using digital forensic tools.</li>
+                <li data-i18n="exp3_li_2">Assist with vulnerability assessments and penetration tests.</li>
+                <li data-i18n="exp3_li_3">Research collaboration strategies between Blue Team and Red Team.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="note muted" data-i18n="exp_note">
+          Want this section tailored to a specific role? You can swap bullets for measurable outcomes in minutes.
+        </div>
+      </div>
+    </section>
+
+    <section id="certs" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="certs_title">Certifications</h2>
+          <p class="muted" data-i18n="certs_subtitle">Recognized credentials that back up the work.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>OSCP</h3>
+            <p class="muted" data-i18n="cert_oscp">Offensive Security Certified Professional — OFFSEC</p>
+            <p class="micro" data-i18n="issued_jul_2024">Issued July 2024</p>
+          </article>
+
+          <article class="card">
+            <h3>CRTO</h3>
+            <p class="muted" data-i18n="cert_crto">Certified Red Team Operator — Zero-Point Security Ltd</p>
+            <p class="micro" data-i18n="issued_dec_2024">Issued December 2024</p>
+          </article>
+
+          <article class="card">
+            <h3>ISO/IEC 27001</h3>
+            <p class="muted" data-i18n="cert_iso">Certified ISO/IEC 27001:2013 Lead Auditor — IRCA</p>
+            <p class="micro" data-i18n="issued_jul_2022">Issued July 2022</p>
+          </article>
+
+          <article class="card">
+            <h3>CEH</h3>
+            <p class="muted" data-i18n="cert_ceh">Certified Ethical Hacker — EC-COUNCIL</p>
+            <p class="micro" data-i18n="issued_jul_2020">Issued July 2020</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="contact_title">Contact</h2>
+          <p class="muted" data-i18n="contact_subtitle">
+            Tell me what you’re building, what you want to test, and your timeline.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3 data-i18n="contact_h3">Email</h3>
+            <p class="muted" data-i18n="contact_p">
+              The fastest way to reach me:
+            </p>
+            <p class="mono">
+              <a href="mailto:tsalscar@gmail.com">tsalscar@gmail.com</a>
+            </p>
+
+            <div class="divider" role="presentation"></div>
+
+            <p class="label" data-i18n="contact_what_label">What helps in the first message</p>
+            <ul class="list">
+              <li data-i18n="contact_li_1">Scope (web / API / mobile / network)</li>
+              <li data-i18n="contact_li_2">Environment (prod, staging, test accounts)</li>
+              <li data-i18n="contact_li_3">Desired output (report, retest, workshop)</li>
+            </ul>
+          </article>
+
+          <form class="card form" id="contactForm">
+            <h3 data-i18n="form_title">Quick message</h3>
+            <p class="muted" data-i18n="form_hint">
+              This form opens your mail app (no backend). Nothing is stored.
+            </p>
+
+            <label class="field">
+              <span data-i18n="form_name">Name</span>
+              <input type="text" id="name" autocomplete="name" placeholder="Your name" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="form_subject">Subject</span>
+              <input type="text" id="subject" autocomplete="off" placeholder="Pen test request" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="form_message">Message</span>
+              <textarea id="message" rows="5" placeholder="Tell me about the target, scope, and timeline."></textarea>
+            </label>
+
+            <button class="btn" type="submit" data-i18n="form_send">Create email</button>
+            <p class="micro muted" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="micro muted">
+        <span data-i18n="footer_text">©</span>
+        <span id="year"></span>
+        <span> · </span>
+        <span data-i18n="footer_name">Sal Scar</span>
+      </p>
+      <a class="micro muted" href="#top" data-i18n="back_to_top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
