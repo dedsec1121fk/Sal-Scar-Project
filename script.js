@@ -1,5 +1,6 @@
-/* Theme + Language switching (English + Bahamian Creole style copy)
-   Black & white only. No images. No backend. */
+/* Theme + Language switching (English + Bahamian Creole-style copy)
+   Static site for GitHub Pages. Black & white only. No images.
+*/
 
 const i18n = {
   en: {
@@ -9,7 +10,6 @@ const i18n = {
     nav_experience: "Experience",
     nav_certs: "Certifications",
     nav_contact: "Contact",
-    menu: "Menu",
 
     theme_dark: "Dark",
     theme_light: "Light",
@@ -115,34 +115,22 @@ const i18n = {
     contact_li_1: "Scope (web / API / mobile / network)",
     contact_li_2: "Environment (prod, staging, test accounts)",
     contact_li_3: "Desired output (report, retest, workshop)",
+    cta_email: "Email me",
 
-    form_title: "Quick message",
-    form_hint:
-      "This form opens your mail app (no backend). Nothing is stored.",
-    form_name: "Name",
-    form_subject: "Subject",
-    form_message: "Message",
-    form_send: "Create email",
-
-    footer_text: "©",
-    footer_name: "Sal Scar",
-    back_to_top: "Back to top",
-
-    status_empty: "Add a subject and message first.",
-    status_opening: "Opening your mail app…",
-cta_email: "Email me",
     availability_title: "Availability",
-    availability_text: "I can usually start within 1–2 weeks depending on scope. Fast-turn retests are available when fixes are ready.",
+    availability_text:
+      "I can usually start within 1–2 weeks depending on scope. Fast-turn retests are available when fixes are ready.",
     deliverables_title: "Deliverables",
     deliv_li_1: "Executive summary + technical details",
     deliv_li_2: "Reproduction steps and evidence",
     deliv_li_3: "Remediation guidance and retest notes",
 
+    footer_name: "Sal Scar",
+    back_to_top: "Back to top",
   },
 
   // “Bahama language” — commonly refers to Bahamian Creole / Bahamian Dialect.
-  // This is a respectful, readable approximation aimed for a portfolio site.
-  // If you want it in a different exact variant, you can adjust the strings below.
+  // This is a readable, respectful approximation for a portfolio site.
   bs: {
     brand: "SAL SCAR",
     nav_about: "’Bout me",
@@ -150,7 +138,6 @@ cta_email: "Email me",
     nav_experience: "Experience",
     nav_certs: "Certifications",
     nav_contact: "Contact",
-    menu: "Menu",
 
     theme_dark: "Dark",
     theme_light: "Light",
@@ -256,130 +243,102 @@ cta_email: "Email me",
     contact_li_1: "Scope (web / API / mobile / network)",
     contact_li_2: "Environment (prod, staging, test accounts)",
     contact_li_3: "Desired output (report, retest, workshop)",
+    cta_email: "Email me",
 
-    form_title: "Quick message",
-    form_hint:
-      "Dis form open ya mail app (no backend). Nothin’ stored.",
-    form_name: "Name",
-    form_subject: "Subject",
-    form_message: "Message",
-    form_send: "Create email",
-
-    footer_text: "©",
-    footer_name: "Sal Scar",
-    back_to_top: "Back to top",
-
-    status_empty: "Put subject an’ message first.",
-    status_opening: "Openin’ ya mail app…",
-cta_email: "Email me",
     availability_title: "Availability",
-    availability_text: "I can usually start in 1–2 weeks dependin’ on scope. Fast retests available when fixes ready.",
+    availability_text:
+      "I can usually start in 1–2 weeks dependin’ on scope. Fast retests available when fixes ready.",
     deliverables_title: "Deliverables",
     deliv_li_1: "Exec summary plus technical details",
     deliv_li_2: "Steps fi reproduce an’ evidence",
     deliv_li_3: "Fix guidance an’ retest notes",
 
-  }
+    footer_name: "Sal Scar",
+    back_to_top: "Back to top",
+  },
 };
 
-function qs(sel, root=document){ return root.querySelector(sel); }
-function qsa(sel, root=document){ return [...root.querySelectorAll(sel)]; }
+function qs(sel, root = document) { return root.querySelector(sel); }
+function qsa(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
 
-function setTheme(theme){
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-
-  const themeLabel = qs("#themeLabel");
-  const themeIcon = qs("#themeIcon");
-  const lang = getLang();
-
-  const themeBtn = qs("#themeToggle");
-  if(theme === "light"){
-    themeIcon.textContent = "☀";
-    themeLabel.textContent = i18n[lang].theme_light;
-    if(themeBtn) themeBtn.setAttribute("aria-label", "Switch to dark theme");
-  } else {
-    themeIcon.textContent = "☾";
-    themeLabel.textContent = i18n[lang].theme_dark;
-    if(themeBtn) themeBtn.setAttribute("aria-label", "Switch to light theme");
-  }
-}
-
-function getTheme(){
+function getTheme() {
   return localStorage.getItem("theme") || "dark";
 }
-
-function setLang(lang){
-  document.documentElement.setAttribute("data-lang", lang);
-  localStorage.setItem("lang", lang);
-  applyI18n(lang);
-
-  // Update toggle label to show the *other* language
-  const langLabel = qs("#langLabel");
-  const langBtn = qs("#langToggle");
-  const nextLabel = (lang === "en") ? "Bahamas" : "English";
-  langLabel.textContent = nextLabel;
-  if(langBtn) langBtn.setAttribute("aria-label", `Switch language to ${nextLabel}`);
-
-  // Refresh theme label text in the chosen language
-  setTheme(getTheme());
-}
-
-function getLang(){
+function getLang() {
   return localStorage.getItem("lang") || "en";
 }
 
-function applyI18n(lang){
-  qsa("[data-i18n]").forEach(el=>{
+function applyI18n(lang) {
+  const dict = i18n[lang] || i18n.en;
+  qsa("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    const value = (i18n[lang] && i18n[lang][key]) ? i18n[lang][key] : (i18n.en[key] || "");
-    el.textContent = value;
+    if (!key) return;
+    el.textContent = (dict[key] !== undefined) ? dict[key] : (i18n.en[key] || "");
   });
-  // Update document language
+
   document.documentElement.lang = (lang === "en") ? "en" : "en-BS";
+
+  // Toggle button label should show the other language
+  const langLabel = qs("#langLabel");
+  const langBtn = qs("#langToggle");
+  const nextLabel = (lang === "en") ? "Bahamas" : "English";
+  if (langLabel) langLabel.textContent = nextLabel;
+  if (langBtn) langBtn.setAttribute("aria-label", "Switch language to " + nextLabel);
 }
 
-  btn.addEventListener("click", ()=>{
-    const expanded = btn.getAttribute("aria-expanded") === "true";
-    expanded ? close() : open();
-  });
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
 
-  qsa('a[href^="#"]', menu).forEach(a=>{
-    a.addEventListener("click", close);
-  });
+  const lang = getLang();
+  const dict = i18n[lang] || i18n.en;
 
-  document.addEventListener("keydown", (e)=>{
-    if(e.key === "Escape") close();
-  });
+  const themeIcon = qs("#themeIcon");
+  const themeLabel = qs("#themeLabel");
+  const themeBtn = qs("#themeToggle");
+
+  if (theme === "light") {
+    if (themeIcon) themeIcon.textContent = "☀";
+    if (themeLabel) themeLabel.textContent = dict.theme_light;
+    if (themeBtn) themeBtn.setAttribute("aria-label", "Switch to dark theme");
+  } else {
+    if (themeIcon) themeIcon.textContent = "☾";
+    if (themeLabel) themeLabel.textContent = dict.theme_dark;
+    if (themeBtn) themeBtn.setAttribute("aria-label", "Switch to light theme");
+  }
 }
 
-    if(status) status.textContent = i18n[lang].status_opening;
-
-    const body = `${name ? (name + "\n\n") : ""}${message}`;
-    const mailto = `mailto:tsalscar@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-
-    setTimeout(()=>{ if(status) status.textContent = ""; }, 2500);
-  });
+function setLang(lang) {
+  document.documentElement.setAttribute("data-lang", lang);
+  localStorage.setItem("lang", lang);
+  applyI18n(lang);
+  // Re-apply theme labels in the correct language
+  setTheme(getTheme());
 }
 
-function init(){
-  const savedTheme = getTheme();
-  const savedLang = getLang();
+function init() {
+  // Restore saved settings
+  const lang = getLang();
+  const theme = getTheme();
+  setLang(lang);
+  setTheme(theme);
 
-  setLang(savedLang);
-  setTheme(savedTheme);
+  const themeBtn = qs("#themeToggle");
+  const langBtn = qs("#langToggle");
 
-  qs("#themeToggle")?.addEventListener("click", ()=>{
-    const next = (getTheme() === "dark") ? "light" : "dark";
-    setTheme(next);
-  });
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      const next = (getTheme() === "dark") ? "light" : "dark";
+      setTheme(next);
+    });
+  }
 
-  qs("#langToggle")?.addEventListener("click", ()=>{
-    const next = (getLang() === "en") ? "bs" : "en";
-    setLang(next);
-  });
-
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      const next = (getLang() === "en") ? "bs" : "en";
+      setLang(next);
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", init);
