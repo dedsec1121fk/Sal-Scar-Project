@@ -1,341 +1,303 @@
-/* Theme + Language switching (English + Bahamian Creole-style copy)
-   Static site for GitHub Pages. Black & white only. No images.
-*/
+// Theme + Language switching (English + Bahasa copy)
+// Static + GitHub Pages ready. No frameworks.
 
 const i18n = {
   en: {
-    brand: "SAL SCAR",
+    skip: "Skip to content",
+    brand: "YOUR NAME",
     nav_about: "About",
-    nav_skills: "Skills",
-    nav_experience: "Experience",
-    nav_certs: "Certifications",
+    nav_work: "Work",
+    nav_services: "Services",
     nav_contact: "Contact",
-
     theme_dark: "Dark",
     theme_light: "Light",
 
-    eyebrow: "CYBEROPS CONSULTANT",
-    hero_h1_a: "Offensive security",
-    hero_h1_b: "that is clear, practical, and report-ready.",
+    hero_eyebrow: "PROFESSIONAL PORTFOLIO",
+    hero_title_a: "Minimal design.",
+    hero_title_b: "Maximum credibility.",
     hero_lead:
-      "Web, Mobile (Android & iOS), Network and API penetration testing & vulnerability assessment—plus mobile static analysis and detailed technical reporting.",
+      "A black & white portfolio that feels premium on mobile, iOS, and desktop—fast to load, easy to edit, and built for GitHub Pages.",
+    cta_work: "See work",
     cta_contact: "Contact",
-    cta_viewwork: "View work",
 
-    m_years_label: "Experience",
-    m_years_value: "2019 — Present",
-    m_focus_label: "Focus",
-    m_focus_value: "Offensive Security",
-    m_reports_label: "Deliverable",
-    m_reports_value: "Actionable Reports",
+    stat_1_k: "Focus",
+    stat_1_v: "Quality",
+    stat_2_k: "Style",
+    stat_2_v: "Black & White",
+    stat_3_k: "Built for",
+    stat_3_v: "GitHub Pages",
 
-    card_title: "Profile",
-    card_subtitle: "CyberOps Consultant — Offensive Work",
-    profile_text:
-      "I’m a CyberOps Consultant with a background in Information Technology security, specializing in offensive work experience.",
-    contact_label: "How to reach me",
-    signature_label: "Signature",
-    no_images_note:
-      "No images. No logos. Just black & white — built for speed, clarity, and credibility.",
+    card_kicker: "PROFILE",
+    card_pill: "Available",
+    card_title: "Role / Title",
+    card_subtitle: "Short, sharp positioning statement that sounds confident and professional.",
+    kv_email_k: "Email",
+    kv_location_k: "Location",
+    kv_location_v: "Remote / On-site",
+    kv_focus_k: "Focus",
+    kv_focus_v: "Your specialty",
+    no_images: "No images, no logos—just typography, spacing, and confidence.",
 
     about_title: "About",
-    about_subtitle:
-      "What I do, how I work, and what you can expect when we collaborate.",
-    about_h3_1: "Engagements",
+    about_sub: "A tight story. Clear value. Simple process.",
+    about_h3_1: "What I do",
     about_p_1:
-      "I perform penetration testing and vulnerability assessments across web applications, APIs, mobile apps (Android & iOS), and networks. I also perform static analysis on mobile devices when needed.",
-    about_h3_2: "Reporting & communication",
+      "I help teams ship better outcomes by combining strong fundamentals, attention to detail, and communication that makes decisions easy.",
+    about_h3_2: "How I work",
     about_p_2:
-      "I prepare detailed technical reports and present findings clearly—so teams can prioritize fixes, validate remediation, and reduce risk without guesswork.",
-    callout_title: "Approach",
-    callout_text:
-      "I focus on real-world impact, reproducible steps, and evidence-backed severity—so every finding is useful, not noisy.",
+      "I keep it calm and structured: understand the goal, deliver quickly, document clearly, iterate with feedback.",
+    approach_k: "APPROACH",
+    approach_v:
+      "Minimal look — premium feel. Every section exists to build trust, not fill space.",
 
-    skills_title: "Skills & tools",
-    skills_subtitle:
-      "A focused toolkit for testing, validation, and client-ready delivery.",
-    skills_h3_1: "Web & API",
-    skills_li_1: "Manual testing with targeted validation",
-    skills_li_2: "Authentication & authorization review",
-    skills_li_3: "Request/response analysis and evidence capture",
-    skills_h3_2: "Mobile",
-    skills_li_4: "Android & iOS penetration testing",
-    skills_li_5: "Static analysis and security review",
-    skills_li_6: "Runtime instrumentation when required",
-    skills_h3_3: "Delivery",
-    skills_li_7: "Clear severity and remediation guidance",
-    skills_li_8: "Executive summary + technical detail",
-    skills_li_9: "Stakeholder-ready presentations",
+    work_title: "Selected work",
+    work_sub: "Replace these with your real projects. No screenshots needed.",
+    w1_title: "Project Alpha",
+    w1_tag: "Case study",
+    w1_desc:
+      "One paragraph: what you built, why it mattered, and the results. Keep it crisp.",
+    w1_b1: "Key outcome 1 (measurable if possible)",
+    w1_b2: "Key outcome 2",
+    w1_b3: "Key outcome 3",
 
-    exp_title: "Experience",
-    exp_subtitle:
-      "A track record of offensive security work with client-facing communication.",
-    exp_role_1: "CyberOps Consultant",
-    exp_time_1: "Oct 2021 — Present",
-    exp1_li_1:
-      "Perform Web, Mobile (Android & iOS), Network and API penetration testing and VA.",
-    exp1_li_2: "Perform static analysis on mobile devices.",
-    exp1_li_3: "Prepare detailed technical reports based on results.",
-    exp1_li_4: "Communicate and present findings to clients.",
-    exp_role_2: "IT Security Engineer",
-    exp_time_2: "Jun 2020 — Sep 2021",
-    exp2_li_1:
-      "Perform Web and Mobile penetration testing and vulnerability assessment.",
-    exp2_li_2:
-      "Monitor source code to identify and safeguard sensitive information.",
-    exp2_li_3: "Compile monthly reports on security incidents.",
-    exp2_li_4: "Validate bug bounty submissions.",
-    exp_role_3: "Cyber Security Analyst Intern",
-    exp_time_3: "Feb 2019 — Feb 2020",
-    exp3_li_1: "Investigate digital cases using digital forensic tools.",
-    exp3_li_2:
-      "Assist with vulnerability assessments and penetration tests.",
-    exp3_li_3:
-      "Research collaboration strategies between Blue Team and Red Team.",
-    exp_note:
-      "Want this section tailored to a specific role? You can swap bullets for measurable outcomes in minutes.",
+    w2_title: "Project Beta",
+    w2_tag: "Systems",
+    w2_desc:
+      "Describe the technical challenge and how you solved it. Then state impact.",
+    w2_b1: "Performance / reliability improvement",
+    w2_b2: "Better developer experience",
+    w2_b3: "Clear documentation",
 
-    certs_title: "Certifications",
-    certs_subtitle: "Recognized credentials that back up the work.",
-    cert_oscp: "Offensive Security Certified Professional — OFFSEC",
-    issued_jul_2024: "Issued July 2024",
-    cert_crto: "Certified Red Team Operator — Zero-Point Security Ltd",
-    issued_dec_2024: "Issued December 2024",
-    cert_iso: "Certified ISO/IEC 27001:2013 Lead Auditor — IRCA",
-    issued_jul_2022: "Issued July 2022",
-    cert_ceh: "Certified Ethical Hacker — EC-COUNCIL",
-    issued_jul_2020: "Issued July 2020",
+    w3_title: "Project Gamma",
+    w3_tag: "Delivery",
+    w3_desc:
+      "Show how you communicate: planning, updates, handover, and polish.",
+    w3_b1: "Clear scope & timeline",
+    w3_b2: "Stakeholder-ready outputs",
+    w3_b3: "Fast iterations",
+
+    srv_title: "Services",
+    srv_sub: "Simple packages that sound expensive — without being vague.",
+    srv1_k: "PACKAGE",
+    srv1_t: "Audit / Review",
+    srv1_p: "Deep review + clear actions. Ideal for quality improvements.",
+    srv2_k: "PACKAGE",
+    srv2_t: "Build / Deliver",
+    srv2_p: "I ship production-ready work with clean handover.",
+    srv3_k: "PACKAGE",
+    srv3_t: "Retainer",
+    srv3_p: "Ongoing support, fixes, improvements, and fast response time.",
 
     contact_title: "Contact",
-    contact_subtitle:
-      "Tell me what you’re building, what you want to test, and your timeline.",
+    contact_sub: "No form. No storage. Click and email.",
     contact_h3: "Email",
-    contact_p: "The fastest way to reach me:",
-    contact_what_label: "What helps in the first message",
-    contact_li_1: "Scope (web / API / mobile / network)",
-    contact_li_2: "Environment (prod, staging, test accounts)",
-    contact_li_3: "Desired output (report, retest, workshop)",
+    contact_p: "Fastest way to reach me:",
+    contact_k: "WHAT TO INCLUDE",
+    c_b1: "Your goal",
+    c_b2: "Timeline",
+    c_b3: "Any constraints",
     cta_email: "Email me",
 
     availability_title: "Availability",
     availability_text:
       "I can usually start within 1–2 weeks depending on scope. Fast-turn retests are available when fixes are ready.",
-    deliverables_title: "Deliverables",
+    deliverables_title: "DELIVERABLES",
     deliv_li_1: "Executive summary + technical details",
     deliv_li_2: "Reproduction steps and evidence",
     deliv_li_3: "Remediation guidance and retest notes",
 
-    footer_name: "Sal Scar",
     back_to_top: "Back to top",
   },
+// Bahasa (Indonesia)
+// Bahasa (Indonesia)
+  id: {
+    skip: "Lewati ke konten",
+    brand: "NAMA ANDA",
+    nav_about: "Tentang",
+    nav_work: "Karya",
+    nav_services: "Layanan",
+    nav_contact: "Kontak",
+    theme_dark: "Gelap",
+    theme_light: "Terang",
 
-  // “Bahama language” — commonly refers to Bahamian Creole / Bahamian Dialect.
-  // This is a readable, respectful approximation for a portfolio site.
-  bs: {
-    brand: "SAL SCAR",
-    nav_about: "’Bout me",
-    nav_skills: "Skills",
-    nav_experience: "Experience",
-    nav_certs: "Certifications",
-    nav_contact: "Contact",
-
-    theme_dark: "Dark",
-    theme_light: "Light",
-
-    eyebrow: "CYBEROPS CONSULTANT",
-    hero_h1_a: "Offensive security",
-    hero_h1_b: "weh clear, practical, an’ ready fi report.",
+    hero_eyebrow: "PORTOFOLIO PROFESIONAL",
+    hero_title_a: "Desain minimal.",
+    hero_title_b: "Kredibilitas maksimal.",
     hero_lead:
-      "Web, Mobile (Android & iOS), Network an’ API penetration testing & vulnerability assessment—plus mobile static analysis an’ detailed technical reports.",
-    cta_contact: "Contact",
-    cta_viewwork: "See di work",
+      "Portofolio hitam-putih yang terasa premium di mobile, iOS, dan desktop—cepat dimuat, mudah diedit, dan siap untuk GitHub Pages.",
+    cta_work: "Lihat karya",
+    cta_contact: "Kontak",
 
-    m_years_label: "Experience",
-    m_years_value: "2019 — Present",
-    m_focus_label: "Focus",
-    m_focus_value: "Offensive Security",
-    m_reports_label: "Deliverable",
-    m_reports_value: "Actionable Reports",
+    stat_1_k: "Fokus",
+    stat_1_v: "Kualitas",
+    stat_2_k: "Gaya",
+    stat_2_v: "Hitam & Putih",
+    stat_3_k: "Dibuat untuk",
+    stat_3_v: "GitHub Pages",
 
-    card_title: "Profile",
-    card_subtitle: "CyberOps Consultant — Offensive Work",
-    profile_text:
-      "I is a CyberOps Consultant wit’ background in IT security, focusin’ on offensive work.",
-    contact_label: "How ya reach me",
-    signature_label: "Signature",
-    no_images_note:
-      "No images. No logos. Jus’ black an’ white — built fi speed, clarity, an’ credibility.",
+    card_kicker: "PROFIL",
+    card_pill: "Tersedia",
+    card_title: "Peran / Jabatan",
+    card_subtitle: "Pernyataan singkat yang tegas dan terdengar profesional.",
+    kv_email_k: "Email",
+    kv_location_k: "Lokasi",
+    kv_location_v: "Remote / On-site",
+    kv_focus_k: "Fokus",
+    kv_focus_v: "Spesialisasi Anda",
+    no_images: "Tanpa gambar, tanpa logo—hanya tipografi, spasi, dan kepercayaan diri.",
 
-    about_title: "’Bout me",
-    about_subtitle:
-      "Wha’ I do, how I work, an’ wha’ ya can expect when we link up.",
-    about_h3_1: "Engagements",
+    about_title: "Tentang",
+    about_sub: "Cerita singkat. Nilai jelas. Proses sederhana.",
+    about_h3_1: "Apa yang saya lakukan",
     about_p_1:
-      "I does penetration testing an’ vulnerability assessments across web apps, APIs, mobile apps (Android & iOS), an’ networks. I does static analysis on mobile too when needed.",
-    about_h3_2: "Reporting & talkin’ it through",
+      "Saya membantu tim menghasilkan hasil yang lebih baik dengan dasar yang kuat, perhatian pada detail, dan komunikasi yang memudahkan pengambilan keputusan.",
+    about_h3_2: "Cara saya bekerja",
     about_p_2:
-      "I write detailed technical reports an’ present findin’s clear—so teams can fix fast, verify remediation, an’ reduce risk wit’ no guessin’.",
-    callout_title: "Approach",
-    callout_text:
-      "I focus on real-world impact, reproducible steps, an’ evidence-backed severity—so every findin’ useful, not noisy.",
+      "Saya bekerja dengan tenang dan terstruktur: pahami tujuan, kirim cepat, dokumentasikan jelas, lalu iterasi dengan masukan.",
+    approach_k: "PENDEKATAN",
+    approach_v:
+      "Tampilan minimal — rasa premium. Setiap bagian ada untuk membangun kepercayaan, bukan sekadar mengisi ruang.",
 
-    skills_title: "Skills & tools",
-    skills_subtitle:
-      "A focused toolkit fi testin’, validatin’, an’ client-ready delivery.",
-    skills_h3_1: "Web & API",
-    skills_li_1: "Manual testin’ wit’ targeted validation",
-    skills_li_2: "Auth an’ authorization review",
-    skills_li_3: "Request/response analysis an’ evidence capture",
-    skills_h3_2: "Mobile",
-    skills_li_4: "Android & iOS penetration testing",
-    skills_li_5: "Static analysis an’ security review",
-    skills_li_6: "Runtime instrumentation when required",
-    skills_h3_3: "Delivery",
-    skills_li_7: "Clear severity an’ remediation guidance",
-    skills_li_8: "Exec summary plus technical detail",
-    skills_li_9: "Stakeholder-ready presentations",
+    work_title: "Karya pilihan",
+    work_sub: "Ganti ini dengan proyek asli Anda. Tanpa screenshot pun tetap kuat.",
+    w1_title: "Proyek Alpha",
+    w1_tag: "Studi kasus",
+    w1_desc:
+      "Satu paragraf: apa yang Anda bangun, kenapa penting, dan hasilnya. Tetap ringkas.",
+    w1_b1: "Hasil utama 1 (kalau bisa terukur)",
+    w1_b2: "Hasil utama 2",
+    w1_b3: "Hasil utama 3",
 
-    exp_title: "Experience",
-    exp_subtitle:
-      "Offensive security work wit’ client-facing communication.",
-    exp_role_1: "CyberOps Consultant",
-    exp_time_1: "Oct 2021 — Present",
-    exp1_li_1:
-      "Do Web, Mobile (Android & iOS), Network an’ API penetration testing an’ VA.",
-    exp1_li_2: "Do static analysis on mobile devices.",
-    exp1_li_3: "Write detailed technical reports based on results.",
-    exp1_li_4: "Explain an’ present findin’s to clients.",
-    exp_role_2: "IT Security Engineer",
-    exp_time_2: "Jun 2020 — Sep 2021",
-    exp2_li_1:
-      "Do Web an’ Mobile penetration testing an’ vulnerability assessment.",
-    exp2_li_2:
-      "Monitor source code fi spot an’ protect sensitive info.",
-    exp2_li_3: "Compile monthly reports on security incidents.",
-    exp2_li_4: "Validate bug bounty submissions.",
-    exp_role_3: "Cyber Security Analyst Intern",
-    exp_time_3: "Feb 2019 — Feb 2020",
-    exp3_li_1: "Investigate digital cases using forensic tools.",
-    exp3_li_2:
-      "Help wit’ vulnerability assessments an’ penetration tests.",
-    exp3_li_3:
-      "Research ways Blue Team an’ Red Team can work better together.",
-    exp_note:
-      "Ya want dis tailored to a specific role? Ya can swap bullets fi measurable outcomes quick.",
+    w2_title: "Proyek Beta",
+    w2_tag: "Sistem",
+    w2_desc:
+      "Jelaskan tantangan teknis dan cara Anda menyelesaikannya, lalu sebutkan dampaknya.",
+    w2_b1: "Peningkatan performa / keandalan",
+    w2_b2: "Pengalaman developer lebih baik",
+    w2_b3: "Dokumentasi jelas",
 
-    certs_title: "Certifications",
-    certs_subtitle: "Credentials weh back up di work.",
-    cert_oscp: "Offensive Security Certified Professional — OFFSEC",
-    issued_jul_2024: "Issued July 2024",
-    cert_crto: "Certified Red Team Operator — Zero-Point Security Ltd",
-    issued_dec_2024: "Issued December 2024",
-    cert_iso: "Certified ISO/IEC 27001:2013 Lead Auditor — IRCA",
-    issued_jul_2022: "Issued July 2022",
-    cert_ceh: "Certified Ethical Hacker — EC-COUNCIL",
-    issued_jul_2020: "Issued July 2020",
+    w3_title: "Proyek Gamma",
+    w3_tag: "Delivery",
+    w3_desc:
+      "Tunjukkan cara Anda berkomunikasi: perencanaan, update, handover, dan pemolesan.",
+    w3_b1: "Ruang lingkup & timeline jelas",
+    w3_b2: "Output siap stakeholder",
+    w3_b3: "Iterasi cepat",
 
-    contact_title: "Contact",
-    contact_subtitle:
-      "Tell me wha’ ya buildin’, wha’ ya want test, an’ ya timeline.",
+    srv_title: "Layanan",
+    srv_sub: "Paket sederhana yang terdengar premium — tanpa kata-kata kosong.",
+    srv1_k: "PAKET",
+    srv1_t: "Audit / Review",
+    srv1_p: "Review mendalam + tindakan yang jelas. Cocok untuk peningkatan kualitas.",
+    srv2_k: "PAKET",
+    srv2_t: "Build / Deliver",
+    srv2_p: "Saya mengirim pekerjaan siap produksi dengan handover yang rapi.",
+    srv3_k: "PAKET",
+    srv3_t: "Retainer",
+    srv3_p: "Dukungan berkelanjutan, perbaikan, peningkatan, dan respons cepat.",
+
+    contact_title: "Kontak",
+    contact_sub: "Tanpa form. Tanpa penyimpanan. Klik dan kirim email.",
     contact_h3: "Email",
-    contact_p: "Fastest way fi reach me:",
-    contact_what_label: "Wha’ helps in di first message",
-    contact_li_1: "Scope (web / API / mobile / network)",
-    contact_li_2: "Environment (prod, staging, test accounts)",
-    contact_li_3: "Desired output (report, retest, workshop)",
-    cta_email: "Email me",
+    contact_p: "Cara tercepat menghubungi saya:",
+    contact_k: "YANG PERLU DISERTAKAN",
+    c_b1: "Tujuan Anda",
+    c_b2: "Timeline",
+    c_b3: "Batasan / kondisi khusus",
+    cta_email: "Kirim email",
 
-    availability_title: "Availability",
+    availability_title: "Ketersediaan",
     availability_text:
-      "I can usually start in 1–2 weeks dependin’ on scope. Fast retests available when fixes ready.",
-    deliverables_title: "Deliverables",
-    deliv_li_1: "Exec summary plus technical details",
-    deliv_li_2: "Steps fi reproduce an’ evidence",
-    deliv_li_3: "Fix guidance an’ retest notes",
+      "Biasanya saya bisa mulai dalam 1–2 minggu tergantung scope. Retest cepat tersedia saat perbaikan sudah siap.",
+    deliverables_title: "HASIL AKHIR",
+    deliv_li_1: "Ringkasan eksekutif + detail teknis",
+    deliv_li_2: "Langkah reproduksi dan bukti",
+    deliv_li_3: "Panduan perbaikan dan catatan retest",
 
-    footer_name: "Sal Scar",
-    back_to_top: "Back to top",
+    back_to_top: "Kembali ke atas",
   },
+
+
 };
 
-function qs(sel, root = document) { return root.querySelector(sel); }
-function qsa(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
+function qs(sel, root=document){ return root.querySelector(sel); }
+function qsa(sel, root=document){ return Array.from(root.querySelectorAll(sel)); }
 
-function getTheme() {
-  return localStorage.getItem("theme") || "dark";
-}
-function getLang() {
-  return localStorage.getItem("lang") || "en";
-}
+function getTheme(){ return localStorage.getItem("theme") || "dark"; }
+function getLang(){ return localStorage.getItem("lang") || "en"; }
 
-function applyI18n(lang) {
+function applyI18n(lang){
   const dict = i18n[lang] || i18n.en;
-  qsa("[data-i18n]").forEach((el) => {
+  qsa("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
-    if (!key) return;
-    el.textContent = (dict[key] !== undefined) ? dict[key] : (i18n.en[key] || "");
+    if(!key) return;
+    const val = (dict[key] !== undefined) ? dict[key] : (i18n.en[key] || "");
+    el.textContent = val;
   });
 
-  document.documentElement.lang = (lang === "en") ? "en" : "en-BS";
+  document.documentElement.setAttribute("data-lang", lang);
+  document.documentElement.lang = (lang === "en") ? "en" : "id";
 
-  // Toggle button label should show the other language
   const langLabel = qs("#langLabel");
   const langBtn = qs("#langToggle");
-  const nextLabel = (lang === "en") ? "Bahamas" : "English";
-  if (langLabel) langLabel.textContent = nextLabel;
-  if (langBtn) langBtn.setAttribute("aria-label", "Switch language to " + nextLabel);
+  const nextLabel = (lang === "en") ? "Bahasa" : "English";
+  if(langLabel) langLabel.textContent = nextLabel;
+  if(langBtn) langBtn.setAttribute("aria-label", "Switch language to " + nextLabel);
+
+  // Update theme label in current language
+  setTheme(getTheme(), lang, true);
 }
 
-function setTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-
-  const lang = getLang();
+function setTheme(theme, langOverride=null, silent=false){
+  const lang = langOverride || getLang();
   const dict = i18n[lang] || i18n.en;
 
-  const themeIcon = qs("#themeIcon");
-  const themeLabel = qs("#themeLabel");
-  const themeBtn = qs("#themeToggle");
+  document.documentElement.setAttribute("data-theme", theme);
+  if(!silent) localStorage.setItem("theme", theme);
 
-  if (theme === "light") {
-    if (themeIcon) themeIcon.textContent = "☀";
-    if (themeLabel) themeLabel.textContent = dict.theme_light;
-    if (themeBtn) themeBtn.setAttribute("aria-label", "Switch to dark theme");
-  } else {
-    if (themeIcon) themeIcon.textContent = "☾";
-    if (themeLabel) themeLabel.textContent = dict.theme_dark;
-    if (themeBtn) themeBtn.setAttribute("aria-label", "Switch to light theme");
+  const icon = qs("#themeIcon");
+  const label = qs("#themeLabel");
+  const btn = qs("#themeToggle");
+
+  if(theme === "light"){
+    if(icon) icon.textContent = "☀";
+    if(label) label.textContent = dict.theme_light;
+    if(btn) btn.setAttribute("aria-label", "Switch to dark theme");
+  }else{
+    if(icon) icon.textContent = "☾";
+    if(label) label.textContent = dict.theme_dark;
+    if(btn) btn.setAttribute("aria-label", "Switch to light theme");
   }
 }
 
-function setLang(lang) {
-  document.documentElement.setAttribute("data-lang", lang);
+function setLang(lang){
   localStorage.setItem("lang", lang);
   applyI18n(lang);
-  // Re-apply theme labels in the correct language
-  setTheme(getTheme());
 }
 
-function init() {
-  // Restore saved settings
+function init(){
+  // Restore persisted settings
   const lang = getLang();
   const theme = getTheme();
-  setLang(lang);
+  // Apply language first (it will also set theme label)
+  applyI18n(lang);
+  // Ensure theme is applied and persisted
   setTheme(theme);
 
   const themeBtn = qs("#themeToggle");
   const langBtn = qs("#langToggle");
 
-  if (themeBtn) {
+  if(themeBtn){
     themeBtn.addEventListener("click", () => {
       const next = (getTheme() === "dark") ? "light" : "dark";
+      localStorage.setItem("theme", next);
       setTheme(next);
     });
   }
 
-  if (langBtn) {
+  if(langBtn){
     langBtn.addEventListener("click", () => {
-      const next = (getLang() === "en") ? "bs" : "en";
+      const next = (getLang() === "en") ? "id" : "en";
       setLang(next);
     });
   }
