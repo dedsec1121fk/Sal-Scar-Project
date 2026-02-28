@@ -450,3 +450,12 @@ a {
 
 .reveal{opacity:1;transform:none;}
 .reveal.visible{opacity:1;transform:none;}
+
+/* Responsive fixes */
+.topbar .row{flex-wrap:wrap}
+.brand{max-width:100%}
+.actions{margin-left:auto}
+@media (max-width:900px){
+  .actions{width:100%; justify-content:flex-end}
+}
+.hero{padding-top:28px}
