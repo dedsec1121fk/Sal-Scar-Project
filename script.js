@@ -14,7 +14,7 @@
 
   function updateThemeBtn() {
     const isLight = document.body.classList.contains("light-theme");
-    if (themeBtn) themeBtn.textContent = isLight ? "🌞" : "🌓";
+    if (themeBtn) themeBtn.textContent = isLight ? "🌞" : "🌙";
   }
   updateThemeBtn();
 
@@ -23,37 +23,7 @@
     localStorage.setItem("theme", document.body.classList.contains("light-theme") ? "light" : "dark");
     updateThemeBtn();
   });
-
-  // Active section highlight
-  const navLinks = $$(".nav a");
-  const sections = navLinks
-    .map(a => $(a.getAttribute("href")))
-    .filter(Boolean);
-
-  const ioActive = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const id = "#" + entry.target.id;
-      navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
-    });
-  }, { rootMargin: "-45% 0px -50% 0px", threshold: 0.01 });
-
-  sections.forEach(s => ioActive.observe(s));
-
-  // Reveal animations
-  const revealEls = $$(".reveal");
-  const ioReveal = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        ioReveal.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  revealEls.forEach(el => ioReveal.observe(el));
-
-  // Toast
+// Toast
   const toast = $("#toast");
   let toastTimer = null;
   function showToast(msg) {
@@ -86,25 +56,7 @@
 
   $("#copyEmailBtn")?.addEventListener("click", copyEmail);
   $("#copyEmailBtn2")?.addEventListener("click", copyEmail);
-
-  // Contact form -> mailto
-  $("#contactForm")?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = ($("#name")?.value || "").trim();
-    const subject = ($("#subject")?.value || "").trim() || "Hello";
-    const message = ($("#message")?.value || "").trim();
-
-    const body = [
-      name ? `From: ${name}` : null,
-      "",
-      message
-    ].filter(Boolean).join("\n");
-
-    const url = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = url;
-  });
-
-  // Language toggle (English <-> Bahasa)
+// Language toggle (English <-> Bahasa)
   const langBtn = $("#langBtn");
   const I18N = {
     en: {
