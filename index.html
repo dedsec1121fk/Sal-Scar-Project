@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sal Scar — CyberOps Portfolio</title>
+  <meta name="description" content="Portfolio website — CyberOps Consultant. Experience, certifications, skills, and contact." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="brand" aria-label="Site brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div style="min-width:0">
+            <h1>Sal Scar</h1>
+            <p data-i18n="brand_role">CyberOps Consultant</p>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#experience" data-i18n="nav_experience">Experience</a>
+          <a href="#certs" data-i18n="nav_certs">Certifications</a>
+          <a href="#skills" data-i18n="nav_skills">Skills</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <button class="btn icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">🌓</button>
+          <button class="btn" id="langBtn" aria-label="Toggle language" title="Toggle language">Bahasa</button>
+          <a class="btn primary" href="./assets/CV_SALSCAR.pdf" target="_blank" rel="noreferrer" data-i18n="btn_view_cv">View CV</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="card glass reveal">
+            <div class="card-inner">
+              <div class="kicker"><b>OSCP</b><span>•</span><span>CRTO</span><span>•</span><span>ISO27001 Lead Auditor</span></div>
+              <h2 data-i18n="hero_title">Offensive security work with clean reporting and real-world impact.</h2>
+              <p>
+                <span data-i18n="hero_desc">I perform Web, Mobile (Android & iOS), Network, and API penetration testing and vulnerability assessment,
+                plus mobile static analysis. I deliver detailed technical reports and present findings to clients.</span>
+              </p>
+              <div class="hero-cta">
+                <a class="btn primary" href="#contact" data-i18n="btn_get_in_touch">Get in touch</a>
+                <button class="btn" id="copyEmailBtn" type="button" data-i18n="btn_copy_email">Copy email</button>
+                <a class="btn" href="#experience" data-i18n="btn_see_experience">See experience</a>
+              </div>
+              <p class="small" style="margin-top:14px"><span data-i18n="tip_static">Tip: this site is fully static (HTML/CSS/JS) and works offline.</span></p>
+            </div>
+          </div>
+
+          <aside class="card glass reveal" aria-label="Profile summary">
+            <div class="card-inner mini-profile">
+              <div style="display:flex; align-items:center; gap:14px">
+                <div class="avatar" aria-hidden="true">SS</div>
+                <div>
+                  <div style="font-family: var(--font-secondary, system-ui); font-size: 1.05rem; color: var(--nm-text-accent);">Sal Scar</div>
+                  <div class="meta">CyberOps Consultant • Offensive Security</div>
+                </div>
+              </div>
+
+              <div class="badge-row" aria-label="Highlights">
+                <div class="badge">Web / API PT</div>
+                <div class="badge">Mobile PT (Android/iOS)</div>
+                <div class="badge">Network VA/PT</div>
+                <div class="badge">Reporting</div>
+              </div>
+
+              <div class="card" style="background: var(--nm-menu-solid); border-color: var(--nm-border);">
+                <div class="card-inner" style="padding:16px">
+                  <div class="meta">Quick links</div>
+                  <div class="pills" style="margin-top:10px">
+                    <a class="pill" href="#certs">Certifications</a>
+                    <a class="pill" href="#skills">Skills</a>
+                    <a class="pill" href="./assets/CV_SALSCAR.pdf" target="_blank" rel="noreferrer">Open CV</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="background: var(--nm-menu-solid); border-color: var(--nm-border);">
+                <div class="card-inner" style="padding:16px">
+                  <div class="meta">Contact</div>
+                  <div style="margin-top:8px; font-family: var(--font-mono, ui-monospace);">
+                    <span id="emailText">tsalscar@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="card glass reveal">
+          <div class="card-inner">
+            <h3 data-i18n="h_about">About</h3>
+            <div class="split">
+              <div>
+                <p>
+                  CyberOps Consultant with a background in Information Technology security, specializing in offensive work.
+                  I focus on practical testing, reproducible findings, and clear remediation guidance.
+                </p>
+                <p class="small">
+                  <span data-i18n="about_note">You can replace the name, role, and content with your own details in <b>index.html</b>.</span>
+                </p>
+              </div>
+              <div class="pills" aria-label="Focus areas">
+                <span class="pill">Web Pentesting</span>
+                <span class="pill">Mobile (Android/iOS)</span>
+                <span class="pill">Network Pentesting</span>
+                <span class="pill">API Security</span>
+                <span class="pill">Static Analysis</span>
+                <span class="pill">Client Reporting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h3 style="margin-bottom:12px" class="reveal" data-i18n="h_experience">Experience</h3>
+
+        <div class="grid">
+          <article class="card glass item col-12 reveal">
+            <h4 data-i18n="exp1_title">CyberOps Consultant</h4>
+            <div class="meta" data-i18n="exp1_time">Oct 2021 — Present</div>
+            <p>
+              <span data-i18n="exp1_desc">Perform Web, Mobile (Android & iOS), Network and API penetration testing and vulnerability assessment.
+              Perform static analysis on mobile devices. Prepare detailed technical reports and communicate findings to clients.</span>
+            </p>
+          </article>
+
+          <article class="card glass item col-6 reveal">
+            <h4 data-i18n="exp2_title">IT Security Engineer</h4>
+            <div class="meta" data-i18n="exp2_time">Jun 2020 — Sep 2021</div>
+            <p>
+              <span data-i18n="exp2_desc">Performed Web and Mobile penetration testing and vulnerability assessments. Conducted source code monitoring
+              to identify sensitive information, compiled monthly incident reports, and validated bug bounty submissions.</span>
+            </p>
+          </article>
+
+          <article class="card glass item col-6 reveal">
+            <h4 data-i18n="exp3_title">Cyber Security Analyst Intern</h4>
+            <div class="meta" data-i18n="exp3_time">Feb 2019 — Feb 2020</div>
+            <p>
+              <span data-i18n="exp3_desc">Investigated digital cases using forensic tools and supported vulnerability assessments and pentests.
+              Researched collaboration strategies between Blue Team and Red Team.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs" class="section">
+      <div class="container">
+        <h3 class="reveal" data-i18n="h_certs">Certifications</h3>
+        <div class="grid">
+          <div class="card glass item col-4 reveal">
+            <h4>OSCP</h4>
+            <div class="meta">OffSec • Issued Jul 2024</div>
+            <p data-i18n="cert_oscp_desc">Offensive Security Certified Professional.</p>
+          </div>
+          <div class="card glass item col-4 reveal">
+            <h4>CRTO</h4>
+            <div class="meta">Zero-Point Security • Issued Dec 2024</div>
+            <p data-i18n="cert_crto_desc">Certified Red Team Operator.</p>
+          </div>
+          <div class="card glass item col-4 reveal">
+            <h4>ISO/IEC 27001 Lead Auditor</h4>
+            <div class="meta">IRCA • Issued Jul 2022</div>
+            <p data-i18n="cert_iso_desc">Certified ISO/IEC 27001:2013 Lead Auditor (ISO27001).</p>
+          </div>
+          <div class="card glass item col-6 reveal">
+            <h4>CEH</h4>
+            <div class="meta">EC-Council • Issued Jul 2020</div>
+            <p data-i18n="cert_ceh_desc">Certified Ethical Hacker.</p>
+          </div>
+          <div class="card glass item col-6 reveal">
+            <h4 data-i18n="cert_cv_title">Download the full CV</h4>
+            <div class="meta" data-i18n="cert_cv_meta">PDF included in the ZIP</div>
+            <p>
+              <a class="btn primary" href="./assets/CV_SALSCAR.pdf" target="_blank" rel="noreferrer" data-i18n="btn_open_cv">Open CV</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h3 class="reveal" data-i18n="h_skills">Skills</h3>
+        <div class="grid">
+          <div class="card glass item col-8 reveal">
+            <h4 data-i18n="skills_tooling">Tooling</h4>
+            <p class="pills">
+              <span class="pill">Burp Suite</span>
+              <span class="pill">Postman</span>
+              <span class="pill">Nessus</span>
+              <span class="pill">Frida</span>
+              <span class="pill">Objection</span>
+              <span class="pill">Mobile Static Analysis</span>
+              <span class="pill">Reporting</span>
+            </p>
+          </div>
+          <div class="card glass item col-4 reveal">
+            <h4 data-i18n="skills_deliver_title">What I deliver</h4>
+            <p>
+              <span data-i18n="skills_deliver_desc">Clear issues, evidence, impact, and remediation steps — optimized for engineers and stakeholders.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h3 class="reveal" data-i18n="h_contact">Contact</h3>
+        <div class="grid">
+          <div class="card glass item col-6 reveal">
+            <h4 data-i18n="contact_reach_me">Reach me</h4>
+            <p class="meta" data-i18n="contact_email_label">Email</p>
+            <p style="margin-top:6px; font-family: var(--font-mono, ui-monospace); font-size: 0.95rem;">
+              <span id="emailText2">tsalscar@gmail.com</span>
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+              <button class="btn primary" id="copyEmailBtn2" type="button" data-i18n="btn_copy_email">Copy email</button>
+              <a class="btn" href="./assets/CV_SALSCAR.pdf" target="_blank" rel="noreferrer" data-i18n="btn_open_cv">Open CV</a>
+            </div>
+          </div>
+
+          <div class="card glass item col-6 reveal">
+            <h4 data-i18n="contact_quick_msg">Quick message (local)</h4>
+            <p class="small"><span data-i18n="contact_form_note">This form does not send email (static site). It just opens your email app.</span></p>
+            <form class="form" id="contactForm">
+              <input class="input" id="name" name="name" placeholder="Your name" data-i18n-ph="ph_name" autocomplete="name" />
+              <input class="input" id="subject" name="subject" placeholder="Subject" data-i18n-ph="ph_subject" />
+              <textarea class="input" id="message" name="message" placeholder="Message" data-i18n-ph="ph_message" rows="4"></textarea>
+              <button class="btn primary" type="submit" data-i18n="btn_open_email_draft">Open email draft</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap">
+          <div>© <span id="year"></span> Sal Scar</div>
+          <div class="small"><span data-i18n="footer_note">Built with the DedSec palette • Static HTML/CSS/JS</span></div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
