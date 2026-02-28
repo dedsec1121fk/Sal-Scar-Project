@@ -411,3 +411,15 @@ body{
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior: auto !important}
 }
+
+
+/* Footer centered (Back to top) */
+.footer-center{
+  justify-content: center;
+}
+.footer-center a{
+  text-decoration: none;
+}
+.footer-center a:hover{
+  text-decoration: underline;
+}

@@ -372,8 +372,6 @@ function setupMenu(){
 }
 
 function init(){
-  qs("#year").textContent = String(new Date().getFullYear());
-
   const savedTheme = getTheme();
   const savedLang = getLang();
 
