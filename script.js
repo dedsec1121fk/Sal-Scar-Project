@@ -293,12 +293,15 @@ function setTheme(theme){
   const themeIcon = qs("#themeIcon");
   const lang = getLang();
 
+  const themeBtn = qs("#themeToggle");
   if(theme === "light"){
-    themeIcon.textContent = "◑";
+    themeIcon.textContent = "☀";
     themeLabel.textContent = i18n[lang].theme_light;
+    if(themeBtn) themeBtn.setAttribute("aria-label", "Switch to dark theme");
   } else {
-    themeIcon.textContent = "◐";
+    themeIcon.textContent = "☾";
     themeLabel.textContent = i18n[lang].theme_dark;
+    if(themeBtn) themeBtn.setAttribute("aria-label", "Switch to light theme");
   }
 }
 
@@ -313,7 +316,10 @@ function setLang(lang){
 
   // Update toggle label to show the *other* language
   const langLabel = qs("#langLabel");
-  langLabel.textContent = (lang === "en") ? "Bahamas" : "English";
+  const langBtn = qs("#langToggle");
+  const nextLabel = (lang === "en") ? "Bahamas" : "English";
+  langLabel.textContent = nextLabel;
+  if(langBtn) langBtn.setAttribute("aria-label", `Switch language to ${nextLabel}`);
 
   // Refresh theme label text in the chosen language
   setTheme(getTheme());
@@ -332,20 +338,6 @@ function applyI18n(lang){
   // Update document language
   document.documentElement.lang = (lang === "en") ? "en" : "en-BS";
 }
-
-function setupMenu(){
-  const btn = qs("#menuBtn");
-  const menu = qs("#mobileMenu");
-  if(!btn || !menu) return;
-
-  function close(){
-    menu.hidden = true;
-    btn.setAttribute("aria-expanded", "false");
-  }
-  function open(){
-    menu.hidden = false;
-    btn.setAttribute("aria-expanded", "true");
-  }
 
   btn.addEventListener("click", ()=>{
     const expanded = btn.getAttribute("aria-expanded") === "true";
@@ -388,7 +380,6 @@ function init(){
     setLang(next);
   });
 
-  setupMenu();
 }
 
 document.addEventListener("DOMContentLoaded", init);
