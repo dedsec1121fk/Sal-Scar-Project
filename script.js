@@ -14,7 +14,7 @@
 
   function updateThemeBtn() {
     const isLight = document.body.classList.contains("light-theme");
-    if (themeBtn) themeBtn.textContent = isLight ? "🌞" : "🌙";
+    if (themeBtn) themeBtn.textContent = isLight ? "☀️" : "🌙";
   }
   updateThemeBtn();
 
@@ -39,7 +39,7 @@
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText(email);
-      showToast("Email copied");
+      showToast(t("toast_email_copied"));
     } catch {
       // Fallback
       const ta = document.createElement("textarea");
@@ -50,7 +50,7 @@
       ta.select();
       document.execCommand("copy");
       document.body.removeChild(ta);
-      showToast("Email copied");
+      showToast(t("toast_email_copied"));
     }
   }
 
@@ -63,7 +63,8 @@
       brand_role: "CyberOps Consultant",
       btn_view_cv: "View CV",
       hero_title: "Offensive security work with clean reporting and real-world impact.",
-      hero_desc: "I perform Web, Mobile (Android & iOS), Network, and API penetration testing and vulnerability assessment,\n                plus mobile static analysis. I deliver detailed technical reports and present findings to clients.",
+      hero_desc: "I perform Web, Mobile (Android & iOS), Network, and API penetration testing and vulnerability assessment,
+                plus mobile static analysis. I deliver detailed technical reports and present findings to clients.",
       btn_get_in_touch: "Get in touch",
       btn_copy_email: "Copy email",
       btn_see_experience: "See experience",
@@ -80,13 +81,16 @@
       h_experience: "Experience",
       exp1_title: "CyberOps Consultant",
       exp1_time: "Oct 2021 — Present",
-      exp1_desc: "Perform Web, Mobile (Android & iOS), Network and API penetration testing and vulnerability assessment.\n              Perform static analysis on mobile devices. Prepare detailed technical reports and communicate findings to clients.",
+      exp1_desc: "Perform Web, Mobile (Android & iOS), Network and API penetration testing and vulnerability assessment.
+              Perform static analysis on mobile devices. Prepare detailed technical reports and communicate findings to clients.",
       exp2_title: "IT Security Engineer",
       exp2_time: "Jun 2020 — Sep 2021",
-      exp2_desc: "Performed Web and Mobile penetration testing and vulnerability assessments. Conducted source code monitoring\n              to identify sensitive information, compiled monthly incident reports, and validated bug bounty submissions.",
+      exp2_desc: "Performed Web and Mobile penetration testing and vulnerability assessments. Conducted source code monitoring
+              to identify sensitive information, compiled monthly incident reports, and validated bug bounty submissions.",
       exp3_title: "Cyber Security Analyst Intern",
       exp3_time: "Feb 2019 — Feb 2020",
-      exp3_desc: "Investigated digital cases using forensic tools and supported vulnerability assessments and pentests.\n              Researched collaboration strategies between Blue Team and Red Team.",
+      exp3_desc: "Investigated digital cases using forensic tools and supported vulnerability assessments and pentests.
+              Researched collaboration strategies between Blue Team and Red Team.",
 
       h_certs: "Certifications",
       cert_oscp_desc: "Offensive Security Certified Professional.",
@@ -113,13 +117,52 @@
       ph_subject: "Subject",
       ph_message: "Message",
 
-      footer_note: "Built with the DedSec palette • Static HTML/CSS/JS"
+      footer_note: "Built with the DedSec palette • Static HTML/CSS/JS",
+      skills_areas_title: "Core capabilities",
+      pill_static: "Mobile Static Analysis",
+      pill_reporting: "Technical Reporting",
+      pill_webapi: "Web & API Penetration Testing",
+      pill_mobile: "Mobile PT (Android/iOS)",
+      pill_network: "Network Penetration Testing",
+      pill_va: "Vulnerability Assessment",
+      pill_code: "Source Code Review / Monitoring",
+      pill_bug_bounty: "Bug Bounty Validation",
+      pill_forensics: "Digital Forensics (basic)",
+      pill_client: "Client Communication",
+      skip_to_content: "Skip to content",
+      profile_meta: "CyberOps Consultant • Offensive Security",
+      badge_webapi: "Web / API PT",
+      badge_mobile: "Mobile PT (Android/iOS)",
+      badge_network: "Network VA/PT",
+      badge_reporting: "Reporting",
+      quick_links: "Quick links",
+      contact_label: "Contact",
+      about_body: "CyberOps Consultant with a background in Information Technology security, specializing in offensive work. I focus on practical testing, reproducible findings, and clear remediation guidance.",
+      pill_about_web: "Web Pentesting",
+      pill_about_mobile: "Mobile (Android/iOS)",
+      pill_about_network: "Network Pentesting",
+      pill_about_api: "API Security",
+      pill_about_static: "Static Analysis",
+      pill_about_reporting: "Client Reporting",
+      pill_tool_burp: "Burp Suite",
+      pill_tool_postman: "Postman",
+      pill_tool_nessus: "Nessus",
+      pill_tool_frida: "Frida",
+      pill_tool_objection: "Objection",
+      cert_oscp_meta: "OffSec • Issued Jul 2024",
+      cert_crto_meta: "Zero-Point Security • Issued Dec 2024",
+      cert_iso_meta: "IRCA • Issued Jul 2022",
+      cert_ceh_meta: "EC-Council • Issued Jul 2020",
+      toast_email_copied: "Email copied",
+      toast_lang_en: "English active",
+      toast_lang_id: "Bahasa aktif"
     },
     id: {
       brand_role: "Konsultan CyberOps",
       btn_view_cv: "Lihat CV",
       hero_title: "Keamanan ofensif dengan laporan rapi dan dampak nyata.",
-      hero_desc: "Saya melakukan pengujian penetrasi dan asesmen kerentanan untuk Web, Mobile (Android & iOS), Network, dan API,\n                serta analisis statis pada mobile. Saya menyiapkan laporan teknis detail dan mempresentasikan temuan kepada klien.",
+      hero_desc: "Saya melakukan pengujian penetrasi dan asesmen kerentanan untuk Web, Mobile (Android & iOS), Network, dan API,
+                serta analisis statis pada mobile. Saya menyiapkan laporan teknis detail dan mempresentasikan temuan kepada klien.",
       btn_get_in_touch: "Hubungi saya",
       btn_copy_email: "Salin email",
       btn_see_experience: "Lihat pengalaman",
@@ -136,13 +179,16 @@
       h_experience: "Pengalaman",
       exp1_title: "Konsultan CyberOps",
       exp1_time: "Okt 2021 — Sekarang",
-      exp1_desc: "Melakukan pengujian penetrasi dan asesmen kerentanan untuk Web, Mobile (Android & iOS), Network dan API.\n              Melakukan analisis statis pada perangkat mobile. Menyusun laporan teknis rinci dan menyampaikan temuan kepada klien.",
+      exp1_desc: "Melakukan pengujian penetrasi dan asesmen kerentanan untuk Web, Mobile (Android & iOS), Network dan API.
+              Melakukan analisis statis pada perangkat mobile. Menyusun laporan teknis rinci dan menyampaikan temuan kepada klien.",
       exp2_title: "Engineer Keamanan TI",
       exp2_time: "Jun 2020 — Sep 2021",
-      exp2_desc: "Melakukan pengujian penetrasi dan asesmen kerentanan untuk Web dan Mobile. Melakukan pemantauan source code\n              untuk menemukan informasi sensitif, menyusun laporan insiden bulanan, dan memvalidasi submission bug bounty.",
+      exp2_desc: "Melakukan pengujian penetrasi dan asesmen kerentanan untuk Web dan Mobile. Melakukan pemantauan source code
+              untuk menemukan informasi sensitif, menyusun laporan insiden bulanan, dan memvalidasi submission bug bounty.",
       exp3_title: "Magang Analis Keamanan Siber",
       exp3_time: "Feb 2019 — Feb 2020",
-      exp3_desc: "Menyelidiki kasus digital menggunakan tools forensik dan mendukung asesmen kerentanan serta pentest.\n              Meneliti strategi kolaborasi antara Blue Team dan Red Team.",
+      exp3_desc: "Menyelidiki kasus digital menggunakan tools forensik dan mendukung asesmen kerentanan serta pentest.
+              Meneliti strategi kolaborasi antara Blue Team dan Red Team.",
 
       h_certs: "Sertifikasi",
       cert_oscp_desc: "Offensive Security Certified Professional.",
@@ -169,7 +215,45 @@
       ph_subject: "Subjek",
       ph_message: "Pesan",
 
-      footer_note: "Dibuat dengan palet DedSec • HTML/CSS/JS statis"
+      footer_note: "Dibuat dengan palet DedSec • HTML/CSS/JS statis",
+      skills_areas_title: "Kemampuan inti",
+      pill_static: "Analisis Statis Mobile",
+      pill_reporting: "Laporan Teknis",
+      pill_webapi: "Pentest Web & API",
+      pill_mobile: "Pentest Mobile (Android/iOS)",
+      pill_network: "Pentest Jaringan",
+      pill_va: "Asesmen Kerentanan",
+      pill_code: "Review / Monitoring Source Code",
+      pill_bug_bounty: "Validasi Bug Bounty",
+      pill_forensics: "Forensik Digital (dasar)",
+      pill_client: "Komunikasi dengan Klien",
+      skip_to_content: "Lewati ke konten",
+      profile_meta: "Konsultan CyberOps • Keamanan Ofensif",
+      badge_webapi: "Pentest Web / API",
+      badge_mobile: "Pentest Mobile (Android/iOS)",
+      badge_network: "VA/PT Jaringan",
+      badge_reporting: "Pelaporan",
+      quick_links: "Tautan cepat",
+      contact_label: "Kontak",
+      about_body: "Konsultan CyberOps dengan latar belakang keamanan TI, berfokus pada pekerjaan ofensif. Saya menekankan pengujian yang praktis, temuan yang bisa direproduksi, dan panduan perbaikan yang jelas.",
+      pill_about_web: "Pentest Web",
+      pill_about_mobile: "Mobile (Android/iOS)",
+      pill_about_network: "Pentest Jaringan",
+      pill_about_api: "Keamanan API",
+      pill_about_static: "Analisis Statis",
+      pill_about_reporting: "Pelaporan Klien",
+      pill_tool_burp: "Burp Suite",
+      pill_tool_postman: "Postman",
+      pill_tool_nessus: "Nessus",
+      pill_tool_frida: "Frida",
+      pill_tool_objection: "Objection",
+      cert_oscp_meta: "OffSec • Terbit Jul 2024",
+      cert_crto_meta: "Zero-Point Security • Terbit Des 2024",
+      cert_iso_meta: "IRCA • Terbit Jul 2022",
+      cert_ceh_meta: "EC-Council • Terbit Jul 2020",
+      toast_email_copied: "Email disalin",
+      toast_lang_en: "English active",
+      toast_lang_id: "Bahasa aktif"
     }
   };
 
@@ -182,6 +266,8 @@
     localStorage.setItem("lang", lang);
     applyLang(lang);
   }
+
+  function t(key){ const lang=getLang(); const dict=I18N[lang]||I18N.en; return (dict && dict[key]) ? dict[key] : (I18N.en[key]||key); }
 
   function applyLang(lang) {
     const dict = I18N[lang] || I18N.en;
@@ -217,7 +303,7 @@
   langBtn?.addEventListener("click", () => {
     const next = getLang() === "en" ? "id" : "en";
     setLang(next);
-    showToast(next === "id" ? "Bahasa aktif" : "English active");
+    showToast(next === "id" ? t("toast_lang_id") : t("toast_lang_en"));
   });
 
 })();

@@ -5,55 +5,54 @@
    ============================================================================ */
 
 :root{
-  /* Strict black & white palette */
   --nm-abyss-blue:#000000;
   --nm-nav-solid:#000000;
-  --nm-menu-solid:#0a0a0a;
-  --nm-dark:#000000;
-  --nm-container:rgba(255,255,255,.06);
-  --nm-disclaimer-bg:#000000;
+  --nm-menu-solid:#000000;
+  --nm-container:#000000;
 
-  --nm-border:rgba(255,255,255,.22);
+  --nm-border:rgba(255,255,255,.28);
   --nm-accent:#ffffff;
   --nm-accent-hover:#ffffff;
 
-  --nm-text:rgba(255,255,255,.92);
-  --nm-text-muted:rgba(255,255,255,.72);
+  --nm-text:#ffffff;
+  --nm-text-muted:rgba(255,255,255,.78);
   --nm-text-accent:#ffffff;
-
   --nm-text-on-accent:#000000;
 
-  --shadow-elev-1:0 10px 30px rgba(0,0,0,.55);
-  --shadow-elev-2:0 18px 50px rgba(0,0,0,.65);
-  --shadow-elev-3:0 24px 70px rgba(0,0,0,.72);
+  --shadow-elev-1:0 10px 30px rgba(0,0,0,.60);
+  --shadow-elev-2:0 18px 50px rgba(0,0,0,.70);
+  --shadow-elev-3:0 24px 70px rgba(0,0,0,.80);
 
   --radius-sm:12px;
   --radius-md:16px;
   --radius-lg:22px;
   --radius-pill:999px;
 
-  --glass-blur:14px;
-  --glass-sat:120%;
-  --focus-ring:0 0 0 3px rgba(255,255,255,0.25);
+  --glass-blur:0px;
+  --glass-sat:100%;
+  --focus-ring:0 0 0 3px rgba(255,255,255,0.22);
 }
 
 body.light-theme{
   --nm-abyss-blue:#ffffff;
   --nm-nav-solid:#ffffff;
-  --nm-menu-solid:#f5f5f5;
-  --nm-container:rgba(0,0,0,.05);
-  --nm-border:rgba(0,0,0,.18);
+  --nm-menu-solid:#ffffff;
+  --nm-container:#ffffff;
 
+  --nm-border:rgba(0,0,0,.22);
   --nm-accent:#000000;
   --nm-accent-hover:#000000;
 
-  --nm-text:rgba(0,0,0,.92);
-  --nm-text-muted:rgba(0,0,0,.65);
+  --nm-text:#000000;
+  --nm-text-muted:rgba(0,0,0,.70);
   --nm-text-accent:#000000;
-
   --nm-text-on-accent:#ffffff;
 
-  --focus-ring:0 0 0 3px rgba(0,0,0,0.20);
+  --shadow-elev-1:0 10px 30px rgba(0,0,0,.12);
+  --shadow-elev-2:0 18px 50px rgba(0,0,0,.16);
+  --shadow-elev-3:0 24px 70px rgba(0,0,0,.20);
+
+  --focus-ring:0 0 0 3px rgba(0,0,0,0.18);
 }
 
 *,
@@ -243,7 +242,7 @@ a {
   overflow: hidden;
   position: relative;
 }
-.card.glass::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0.08), transparent 55%);pointer-events:none;}
+.card.glass::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0.06), transparent 55%);pointer-events:none;}
 50% { background-position: center, center, 120% 0; }
 }
 
