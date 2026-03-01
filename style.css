@@ -423,3 +423,25 @@ a:focus-visible, button:focus-visible{
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
 }
+
+
+/* Text links (replaces CTA buttons) */
+.textlink{
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 800;
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 55%, transparent);
+  padding-bottom: .08rem;
+}
+.textlink:hover{
+  text-decoration: none;
+  border-bottom-color: var(--fg);
+}
+.hero-links{
+  display:flex;
+  align-items:center;
+  gap: .7rem;
+  margin: 1.1rem 0 1.25rem;
+  flex-wrap: wrap;
+}
+.sep{color: var(--muted2)}
