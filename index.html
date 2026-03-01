@@ -1,42 +1,43 @@
 <!doctype html>
-<html lang="en" data-theme="dark" data-lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="dark light" />
-  <title>Portfolio — Black & White</title>
-  <meta name="description" content="A professional black & white portfolio template with theme and language switching. Static, GitHub Pages-ready." />
+  <title>Sal Scar — CyberOps Consultant</title>
+  <meta name="description" content="Black & white portfolio — Sal Scar, CyberOps Consultant. Web, API, Mobile, and Network security testing with clear reporting." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body id="top">
-  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="header">
+  <header class="header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Home">
         <span class="brand-mark" aria-hidden="true">■</span>
-        <span class="brand-text" data-i18n="brand">YOUR NAME</span>
+        <span class="brand-name">SAL SCAR</span>
+        <span class="brand-role">CYBEROPS CONSULTANT</span>
       </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#about" data-i18n="nav_about">About</a>
-        <a href="#work" data-i18n="nav_work">Work</a>
-        <a href="#services" data-i18n="nav_services">Services</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
-      </nav>
+      <!-- Only one control (theme) as requested -->
+      <button class="iconbtn" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <span class="icon" id="themeIcon" aria-hidden="true">🌙</span>
+        <span class="label" id="themeLabel">Theme</span>
+      </button>
+    </div>
 
-      <div class="controls" aria-label="Preferences">
-        <button class="iconbtn" id="langToggle" type="button">
-          <span class="icon" aria-hidden="true">⌁</span>
-          <span class="label" id="langLabel">Bahasa</span>
-        </button>
-
-        <button class="iconbtn" id="themeToggle" type="button">
-          <span class="icon" id="themeIcon" aria-hidden="true">☾</span>
-          <span class="label" id="themeLabel" data-i18n="theme_dark">Dark</span>
-        </button>
-      </div>
+    <!-- Minimal navigation as text links (not buttons) -->
+    <div class="container header-links" aria-label="Jump links">
+      <a class="textlink" href="#about">About</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a class="textlink" href="#skills">Skills</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a class="textlink" href="#experience">Experience</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a class="textlink" href="#certs">Certifications</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a class="textlink" href="#contact">Contact</a>
     </div>
   </header>
 
@@ -44,34 +45,29 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero_eyebrow">PROFESSIONAL PORTFOLIO</p>
+          <p class="eyebrow">OFFENSIVE SECURITY · CLEAR REPORTING</p>
           <h1 class="h1">
-            <span data-i18n="hero_title_a">Minimal design.</span><br/>
-            <span class="muted" data-i18n="hero_title_b">Maximum credibility.</span>
+            Minimal design.<br />
+            <span class="muted">Maximum credibility.</span>
           </h1>
-
-          <p class="lead" data-i18n="hero_lead">
-            A black &amp; white portfolio that feels premium on mobile, iOS, and desktop—fast to load, easy to edit, and built for GitHub Pages.
+          <p class="lead">
+            I’m <strong>Sal Scar</strong>, a CyberOps Consultant specializing in offensive security.
+            I perform Web, API, Mobile (Android &amp; iOS), and Network penetration testing &amp; vulnerability assessment,
+            including mobile static analysis — with client-ready technical reporting.
           </p>
-
-          <div class="hero-links" aria-label="Quick links">
-            <a class="textlink" href="#work" data-i18n="cta_work">See work</a>
-            <span class="sep" aria-hidden="true">·</span>
-            <a class="textlink" href="#contact" data-i18n="cta_contact">Contact</a>
-          </div>
 
           <dl class="stats" aria-label="Highlights">
             <div class="stat">
-              <dt data-i18n="stat_1_k">Focus</dt>
-              <dd data-i18n="stat_1_v">Quality</dd>
+              <dt>Current role</dt>
+              <dd>CyberOps Consultant</dd>
             </div>
             <div class="stat">
-              <dt data-i18n="stat_2_k">Style</dt>
-              <dd data-i18n="stat_2_v">Black & White</dd>
+              <dt>Since</dt>
+              <dd>2019</dd>
             </div>
             <div class="stat">
-              <dt data-i18n="stat_3_k">Built for</dt>
-              <dd data-i18n="stat_3_v">GitHub Pages</dd>
+              <dt>Deliverable</dt>
+              <dd>Actionable reports</dd>
             </div>
           </dl>
         </div>
@@ -79,30 +75,29 @@
         <aside class="hero-card" aria-label="Profile card">
           <div class="card">
             <div class="card-top">
-              <p class="kicker" data-i18n="card_kicker">PROFILE</p>
-              <p class="mono pill" data-i18n="card_pill">Available</p>
+              <p class="kicker">PROFILE</p>
+              <span class="pill mono">Available</span>
             </div>
 
-            <h2 class="card-title" data-i18n="card_title">Role / Title</h2>
-            <p class="muted" data-i18n="card_subtitle">Short, sharp positioning statement that sounds confident and professional.</p>
+            <h2 class="card-title">Sal Scar</h2>
+            <p class="muted">
+              CyberOps Consultant — Offensive Security (Web · API · Mobile · Network)
+            </p>
 
             <div class="divider" role="presentation"></div>
 
             <div class="kv">
-              <p class="kv-k" data-i18n="kv_email_k">Email</p>
-              <p class="kv-v mono"><a href="mailto:you@example.com">you@example.com</a></p>
+              <p class="kv-k">Email</p>
+              <p class="kv-v mono"><a href="mailto:tsalscar@gmail.com">tsalscar@gmail.com</a></p>
 
-              <p class="kv-k" data-i18n="kv_location_k">Location</p>
-              <p class="kv-v" data-i18n="kv_location_v">Remote / On-site</p>
-
-              <p class="kv-k" data-i18n="kv_focus_k">Focus</p>
-              <p class="kv-v" data-i18n="kv_focus_v">Your specialty</p>
+              <p class="kv-k">Tools</p>
+              <p class="kv-v">Burp Suite · Postman · Nessus · Frida · Objection</p>
             </div>
 
             <div class="divider" role="presentation"></div>
 
-            <p class="micro muted" data-i18n="no_images">
-              No images, no logos—just typography, spacing, and confidence.
+            <p class="micro muted">
+              No images. No logos. Just black &amp; white — built for speed, clarity, and trust.
             </p>
           </div>
         </aside>
@@ -112,169 +107,218 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-head">
-          <h2 class="h2" data-i18n="about_title">About</h2>
-          <p class="sub" data-i18n="about_sub">A tight story. Clear value. Simple process.</p>
+          <h2 class="h2">About</h2>
+          <p class="sub">What I do and what you can expect.</p>
         </div>
 
         <div class="grid-2">
           <article class="card">
-            <h3 class="h3" data-i18n="about_h3_1">What I do</h3>
-            <p data-i18n="about_p_1">
-              I help teams ship better outcomes by combining strong fundamentals, attention to detail, and communication that makes decisions easy.
+            <h3 class="h3">Engagements</h3>
+            <p>
+              I perform penetration testing and vulnerability assessments across web applications, APIs, mobile apps
+              (Android &amp; iOS), and networks. When needed, I also perform static analysis on mobile applications.
             </p>
           </article>
 
           <article class="card">
-            <h3 class="h3" data-i18n="about_h3_2">How I work</h3>
-            <p data-i18n="about_p_2">
-              I keep it calm and structured: understand the goal, deliver quickly, document clearly, iterate with feedback.
+            <h3 class="h3">Reporting &amp; communication</h3>
+            <p>
+              I prepare detailed technical reports and present findings clearly — so teams can prioritize fixes, validate
+              remediation, and reduce risk without guesswork.
             </p>
           </article>
         </div>
 
         <div class="callout">
-          <p class="kicker" data-i18n="approach_k">APPROACH</p>
-          <p class="callout-text" data-i18n="approach_v">
-            Minimal look — premium feel. Every section exists to build trust, not fill space.
+          <p class="kicker">APPROACH</p>
+          <p class="callout-text">
+            Real-world impact, reproducible steps, and evidence-backed severity — every finding is useful, not noisy.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section alt">
+    <section id="skills" class="section alt">
       <div class="container">
         <div class="section-head">
-          <h2 class="h2" data-i18n="work_title">Selected work</h2>
-          <p class="sub" data-i18n="work_sub">Replace these with your real projects. No screenshots needed.</p>
+          <h2 class="h2">Skills</h2>
+          <p class="sub">A focused toolkit for validation and delivery.</p>
         </div>
 
-        <div class="work-grid">
-          <article class="card work-card">
-            <div class="work-top">
-              <h3 class="h3" data-i18n="w1_title">Project Alpha</h3>
-              <span class="pill mono" data-i18n="w1_tag">Case study</span>
-            </div>
-            <p class="muted" data-i18n="w1_desc">
-              One paragraph: what you built, why it mattered, and the results. Keep it crisp.
-            </p>
-            <ul class="bullets">
-              <li data-i18n="w1_b1">Key outcome 1 (measurable if possible)</li>
-              <li data-i18n="w1_b2">Key outcome 2</li>
-              <li data-i18n="w1_b3">Key outcome 3</li>
-            </ul>
-          </article>
-
-          <article class="card work-card">
-            <div class="work-top">
-              <h3 class="h3" data-i18n="w2_title">Project Beta</h3>
-              <span class="pill mono" data-i18n="w2_tag">Systems</span>
-            </div>
-            <p class="muted" data-i18n="w2_desc">
-              Describe the technical challenge and how you solved it. Then state impact.
-            </p>
-            <ul class="bullets">
-              <li data-i18n="w2_b1">Performance / reliability improvement</li>
-              <li data-i18n="w2_b2">Better developer experience</li>
-              <li data-i18n="w2_b3">Clear documentation</li>
-            </ul>
-          </article>
-
-          <article class="card work-card">
-            <div class="work-top">
-              <h3 class="h3" data-i18n="w3_title">Project Gamma</h3>
-              <span class="pill mono" data-i18n="w3_tag">Delivery</span>
-            </div>
-            <p class="muted" data-i18n="w3_desc">
-              Show how you communicate: planning, updates, handover, and polish.
-            </p>
-            <ul class="bullets">
-              <li data-i18n="w3_b1">Clear scope & timeline</li>
-              <li data-i18n="w3_b2">Stakeholder-ready outputs</li>
-              <li data-i18n="w3_b3">Fast iterations</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2" data-i18n="srv_title">Services</h2>
-          <p class="sub" data-i18n="srv_sub">Simple packages that sound expensive — without being vague.</p>
+        <div class="chips" aria-label="Skills list">
+          <span class="chip">Burp Suite</span>
+          <span class="chip">Postman</span>
+          <span class="chip">Nessus</span>
+          <span class="chip">Frida</span>
+          <span class="chip">Objection</span>
         </div>
 
         <div class="grid-3">
           <article class="card">
-            <p class="kicker" data-i18n="srv1_k">PACKAGE</p>
-            <h3 class="h3" data-i18n="srv1_t">Audit / Review</h3>
-            <p class="muted" data-i18n="srv1_p">Deep review + clear actions. Ideal for quality improvements.</p>
+            <h3 class="h3">Web &amp; API</h3>
+            <ul class="bullets">
+              <li>Manual testing with targeted validation</li>
+              <li>Authentication &amp; authorization review</li>
+              <li>Evidence capture and reproducible steps</li>
+            </ul>
           </article>
 
           <article class="card">
-            <p class="kicker" data-i18n="srv2_k">PACKAGE</p>
-            <h3 class="h3" data-i18n="srv2_t">Build / Deliver</h3>
-            <p class="muted" data-i18n="srv2_p">I ship production-ready work with clean handover.</p>
+            <h3 class="h3">Mobile</h3>
+            <ul class="bullets">
+              <li>Android &amp; iOS penetration testing</li>
+              <li>Static analysis and security review</li>
+              <li>Runtime instrumentation when required</li>
+            </ul>
           </article>
 
           <article class="card">
-            <p class="kicker" data-i18n="srv3_k">PACKAGE</p>
-            <h3 class="h3" data-i18n="srv3_t">Retainer</h3>
-            <p class="muted" data-i18n="srv3_p">Ongoing support, fixes, improvements, and fast response time.</p>
+            <h3 class="h3">Delivery</h3>
+            <ul class="bullets">
+              <li>Clear severity and remediation guidance</li>
+              <li>Executive summary + technical detail</li>
+              <li>Stakeholder-ready presentation of findings</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section alt">
+    <section id="experience" class="section">
       <div class="container">
         <div class="section-head">
-          <h2 class="h2" data-i18n="contact_title">Contact</h2>
-          <p class="sub" data-i18n="contact_sub">No form. No storage. Click and email.</p>
+          <h2 class="h2">Experience</h2>
+          <p class="sub">Roles and responsibilities (from CV).</p>
+        </div>
+
+        <div class="timeline" role="list">
+          <div class="tl-item" role="listitem">
+            <div class="tl-meta">
+              <p class="tl-role">CyberOps Consultant</p>
+              <p class="tl-time mono">Oct 2021 — Present</p>
+            </div>
+            <div class="tl-body card">
+              <ul class="bullets">
+                <li>Perform Web, Mobile (Android &amp; iOS), Network and API penetration testing and vulnerability assessment.</li>
+                <li>Perform static analysis on mobile devices.</li>
+                <li>Prepare detailed technical reports based on testing results.</li>
+                <li>Communicate and present findings to clients.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-meta">
+              <p class="tl-role">IT Security Engineer</p>
+              <p class="tl-time mono">Jun 2020 — Sep 2021</p>
+            </div>
+            <div class="tl-body card">
+              <ul class="bullets">
+                <li>Perform Web and Mobile penetration testing and vulnerability assessment.</li>
+                <li>Monitor source code to identify and safeguard sensitive information.</li>
+                <li>Compile monthly reports on security incidents.</li>
+                <li>Validate bug bounty submissions.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-meta">
+              <p class="tl-role">Cyber Security Analyst Intern</p>
+              <p class="tl-time mono">Feb 2019 — Feb 2020</p>
+            </div>
+            <div class="tl-body card">
+              <ul class="bullets">
+                <li>Investigate digital cases using digital forensic tools.</li>
+                <li>Assist co-workers with vulnerability assessments and penetration tests.</li>
+                <li>Research collaboration strategies between Blue Team and Red Team.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Certifications</h2>
+          <p class="sub">Recognized credentials.</p>
         </div>
 
         <div class="grid-2">
           <article class="card">
-            <h3 class="h3" data-i18n="contact_h3">Email</h3>
-            <p class="muted" data-i18n="contact_p">Fastest way to reach me:</p>
-            <p class="mono biglink"><a href="mailto:you@example.com">you@example.com</a></p>
-
-            <div class="divider" role="presentation"></div>
-
-            <p class="kicker" data-i18n="contact_k">WHAT TO INCLUDE</p>
-            <ul class="bullets">
-              <li data-i18n="c_b1">Your goal</li>
-              <li data-i18n="c_b2">Timeline</li>
-              <li data-i18n="c_b3">Any constraints</li>
-            </ul>
-
-            <div class="divider" role="presentation"></div>
-
-            <a class="textlink" href="mailto:you@example.com?subject=Project%20Inquiry" data-i18n="cta_email">Email me</a>
+            <h3 class="h3">OSCP</h3>
+            <p class="muted">Offensive Security Certified Professional — OFFSEC</p>
+            <p class="micro">Issued July 2024</p>
           </article>
 
           <article class="card">
-            <h3 class="h3" data-i18n="availability_title">Availability</h3>
-            <p class="muted" data-i18n="availability_text">
+            <h3 class="h3">CRTO</h3>
+            <p class="muted">Certified Red Team Operator — Zero-Point Security Ltd</p>
+            <p class="micro">Issued December 2024</p>
+          </article>
+
+          <article class="card">
+            <h3 class="h3">ISO/IEC 27001</h3>
+            <p class="muted">Certified ISO/IEC 27001:2013 Lead Auditor — IRCA</p>
+            <p class="micro">Issued July 2022</p>
+          </article>
+
+          <article class="card">
+            <h3 class="h3">CEH</h3>
+            <p class="muted">Certified Ethical Hacker — EC-COUNCIL</p>
+            <p class="micro">Issued July 2020</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Contact</h2>
+          <p class="sub">No form. No storage. Click and email.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3 class="h3">Email</h3>
+            <p class="muted">Fastest way to reach me:</p>
+            <p class="mono biglink"><a href="mailto:tsalscar@gmail.com">tsalscar@gmail.com</a></p>
+
+            <div class="divider" role="presentation"></div>
+
+            <p class="kicker">WHAT TO INCLUDE</p>
+            <ul class="bullets">
+              <li>Scope (web / API / mobile / network)</li>
+              <li>Environment (prod, staging, test accounts)</li>
+              <li>Desired output (report, retest, workshop)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="h3">Availability</h3>
+            <p class="muted">
               I can usually start within 1–2 weeks depending on scope. Fast-turn retests are available when fixes are ready.
             </p>
 
             <div class="divider" role="presentation"></div>
 
-            <p class="kicker" data-i18n="deliverables_title">DELIVERABLES</p>
+            <p class="kicker">DELIVERABLES</p>
             <ul class="bullets">
-              <li data-i18n="deliv_li_1">Executive summary + technical details</li>
-              <li data-i18n="deliv_li_2">Reproduction steps and evidence</li>
-              <li data-i18n="deliv_li_3">Remediation guidance and retest notes</li>
+              <li>Executive summary + technical details</li>
+              <li>Reproduction steps and evidence</li>
+              <li>Remediation guidance and retest notes</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container footer-inner footer-center">
-        <a class="micro muted" href="#top" data-i18n="back_to_top">Back to top</a>
+        <a class="micro muted" href="#top">Back to top</a>
       </div>
     </footer>
   </main>

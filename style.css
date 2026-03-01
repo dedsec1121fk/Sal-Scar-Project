@@ -1,13 +1,14 @@
-/* Black & white only — elegant spacing, strong typography, responsive layout. */
+/* Black & white only — premium spacing & typography. */
 :root{
   --bg:#000;
   --fg:#fff;
-  --muted:rgba(255,255,255,.72);
-  --muted2:rgba(255,255,255,.55);
+  --muted:rgba(255,255,255,.74);
+  --muted2:rgba(255,255,255,.56);
   --border:rgba(255,255,255,.16);
   --card:rgba(255,255,255,.06);
   --card2:rgba(255,255,255,.08);
   --shadow:rgba(0,0,0,.45);
+
   --radius:18px;
   --container:1120px;
 
@@ -17,10 +18,10 @@
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
 
-  --h1: clamp(2.15rem, 3.7vw, 3.35rem);
+  --h1: clamp(2.1rem, 3.7vw, 3.25rem);
   --h2: clamp(1.35rem, 2.25vw, 1.85rem);
   --h3: 1.05rem;
-  --lead: 1.10rem;
+  --lead: 1.08rem;
 }
 
 html[data-theme="light"]{
@@ -55,10 +56,15 @@ a:focus-visible, button:focus-visible{
   border-radius: 12px;
 }
 
+.container{
+  width: min(var(--container), calc(100% - 2.2rem));
+  margin: 0 auto;
+}
+
 .skip{
   position:absolute;
   left:-9999px;
-  top: 10px;
+  top: 12px;
   z-index: 9999;
   background: var(--bg);
   color: var(--fg);
@@ -68,17 +74,12 @@ a:focus-visible, button:focus-visible{
 }
 .skip:focus{left: 12px}
 
-.container{
-  width: min(var(--container), calc(100% - 2.2rem));
-  margin: 0 auto;
-}
-
 .header{
   position: sticky;
   top: 0;
   z-index: 100;
   padding-top: var(--safe-top);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -88,15 +89,15 @@ a:focus-visible, button:focus-visible{
   align-items:center;
   justify-content:space-between;
   gap: 1rem;
-  padding: .95rem 0;
+  padding: .95rem 0 .55rem;
 }
 
 .brand{
   display:flex;
-  align-items:center;
-  gap: .65rem;
+  align-items:baseline;
+  gap: .7rem;
   text-decoration:none;
-  min-width: 180px;
+  min-width: 220px;
 }
 .brand:hover{text-decoration:none}
 .brand-mark{
@@ -108,39 +109,21 @@ a:focus-visible, button:focus-visible{
   border: 1px solid var(--border);
   background: var(--card);
   font-size: 13px;
+  flex: 0 0 auto;
 }
-.brand-text{
-  font-weight: 750;
-  letter-spacing: .18em;
+.brand-name{
+  font-weight: 820;
+  letter-spacing: .16em;
   font-size: .92rem;
   white-space: nowrap;
 }
-
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap: .45rem;
-  flex: 1;
-  min-width: 0;
-}
-.nav a{
-  color: var(--muted);
-  text-decoration:none;
-  border-radius: 14px;
-  padding: .52rem .7rem;
-  border: 1px solid transparent;
-}
-.nav a:hover{
-  color: var(--fg);
-  background: var(--card);
-  border-color: var(--border);
-}
-
-.controls{
-  display:flex;
-  gap: .55rem;
-  align-items:center;
+.brand-role{
+  color: var(--muted2);
+  font-weight: 750;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  white-space: nowrap;
 }
 
 .iconbtn{
@@ -159,11 +142,32 @@ a:focus-visible, button:focus-visible{
   min-height: 44px;
 }
 .iconbtn:hover{background: var(--card2)}
-.iconbtn .icon{font-family: var(--mono); font-size: 1.05rem; line-height: 1}
-.iconbtn .label{font-weight: 700}
+.iconbtn .icon{font-family: var(--mono); font-size: 1.12rem; line-height: 1}
+.iconbtn .label{font-weight: 800}
+
+.header-links{
+  display:flex;
+  gap: .6rem;
+  align-items:center;
+  padding-bottom: .85rem;
+  flex-wrap: wrap;
+}
+.sep{color: var(--muted2)}
+.textlink{
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 800;
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 30%, transparent);
+  padding-bottom: .08rem;
+}
+.textlink:hover{
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+  text-decoration:none;
+}
 
 .hero{
-  padding: 3.6rem 0 2.2rem;
+  padding: 3.2rem 0 2.2rem;
 }
 .hero-grid{
   display:grid;
@@ -176,7 +180,7 @@ a:focus-visible, button:focus-visible{
   margin:0 0 .55rem;
   color: var(--muted2);
   letter-spacing: .22em;
-  font-weight: 750;
+  font-weight: 780;
   font-size: .82rem;
 }
 .h1{
@@ -187,38 +191,10 @@ a:focus-visible, button:focus-visible{
 }
 .lead{
   margin: 1rem 0 1.25rem;
-  max-width: 64ch;
+  max-width: 70ch;
   font-size: var(--lead);
   color: var(--muted);
 }
-.hero-actions{
-  display:flex;
-  gap: .75rem;
-  flex-wrap: wrap;
-  margin: 1.15rem 0 1.2rem;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:.55rem;
-  border-radius: 16px;
-  padding: .62rem .9rem;
-  border: 1px solid var(--border);
-  background: var(--fg);
-  color: var(--bg);
-  text-decoration:none;
-  font-weight: 800;
-  box-shadow: 0 16px 34px -26px var(--shadow);
-  min-height: 44px;
-}
-.btn:hover{filter: brightness(.95); text-decoration:none}
-.btn.ghost{
-  background: transparent;
-  color: var(--fg);
-}
-.btn.ghost:hover{background: var(--card);}
 
 .stats{
   display:grid;
@@ -237,7 +213,7 @@ a:focus-visible, button:focus-visible{
   font-size: .78rem;
   letter-spacing: .10em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 850;
 }
 .stat dd{
   margin: .18rem 0 0;
@@ -348,16 +324,19 @@ a:focus-visible, button:focus-visible{
   color: var(--muted);
 }
 
-.work-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-.work-top{
+.chips{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
+  flex-wrap: wrap;
   gap: .6rem;
+  margin-bottom: 1rem;
+}
+.chip{
+  padding: .45rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card2);
+  font-family: var(--mono);
+  font-size: .9rem;
 }
 
 .bullets{
@@ -369,9 +348,15 @@ a:focus-visible, button:focus-visible{
   color: var(--muted);
 }
 
+.timeline{display:flex; flex-direction:column; gap: 1rem}
+.tl-item{display:grid; grid-template-columns: 220px 1fr; gap: 1rem; align-items:start}
+.tl-meta{padding: .9rem 0}
+.tl-role{margin:0; font-weight: 850}
+.tl-time{margin:.2rem 0 0; color: var(--muted2); font-size: .92rem}
+
 .biglink a{
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 900;
   text-decoration:none;
 }
 .biglink a:hover{text-decoration:underline}
@@ -390,58 +375,23 @@ a:focus-visible, button:focus-visible{
   text-decoration:underline;
 }
 
-/* Responsive polish */
+/* Responsive */
 @media (max-width: 980px){
   .hero-grid{grid-template-columns: 1fr}
-  .nav{
-    justify-content:flex-start;
-    overflow-x:auto;
-    scrollbar-width:none;
-    padding: .25rem 0;
-  }
-  .nav::-webkit-scrollbar{display:none}
-  .nav a{
-    white-space: nowrap;
-    border: 1px solid var(--border);
-    background: var(--card);
-  }
-  .work-grid{grid-template-columns: 1fr}
+  .stats{grid-template-columns: 1fr}
+  .grid-3{grid-template-columns: 1fr}
+  .tl-item{grid-template-columns: 1fr}
+  .header-links{padding-bottom: .95rem}
 }
-
 @media (max-width: 560px){
   .container{width: min(var(--container), calc(100% - 1.4rem))}
   .header-inner{flex-wrap: wrap}
   .brand{min-width: unset}
-  .controls{width: 100%; justify-content:flex-end}
-  .controls .iconbtn{padding: .58rem .72rem}
-  .controls .label{display:none} /* icon-only on very small screens */
-  .stats{grid-template-columns: 1fr}
-  .grid-2, .grid-3{grid-template-columns: 1fr}
+  .brand-role{display:none} /* keep header clean on small screens */
+  .iconbtn .label{display:none} /* icon-only */
+  .grid-2{grid-template-columns: 1fr}
   .section-head{flex-direction: column; align-items:flex-start}
 }
-
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
 }
-
-
-/* Text links (replaces CTA buttons) */
-.textlink{
-  text-decoration: none;
-  color: var(--fg);
-  font-weight: 800;
-  border-bottom: 1px solid color-mix(in srgb, var(--fg) 55%, transparent);
-  padding-bottom: .08rem;
-}
-.textlink:hover{
-  text-decoration: none;
-  border-bottom-color: var(--fg);
-}
-.hero-links{
-  display:flex;
-  align-items:center;
-  gap: .7rem;
-  margin: 1.1rem 0 1.25rem;
-  flex-wrap: wrap;
-}
-.sep{color: var(--muted2)}
