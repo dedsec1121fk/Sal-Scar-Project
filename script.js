@@ -7,22 +7,23 @@ const i18n = {
     nav_experience: "Experience",
     nav_certs: "Certifications",
     nav_contact: "Contact",
+    nav_projects: "Projects",
     hero_eyebrow: "OFFENSIVE SECURITY · CLEAR REPORTING",
     hero_title_a: "Offensive security.",
     hero_title_b: "Clear, actionable reporting.",
     hero_lead:
-      "I’m Sal Scar, a CyberOps Consultant specializing in offensive security. I perform Web, API, Mobile (Android & iOS), and Network penetration testing & vulnerability assessment, including mobile static analysis — with client-ready technical reporting.",
+      "I’m Salma Putri (Sal Scar), a CyberOps Consultant specializing in offensive security. I perform Web, API, Mobile (Android & iOS), and Network penetration testing & vulnerability assessment, including mobile static analysis — with client-ready technical reporting.",
     cta_experience: "View experience",
     cta_contact: "Contact",
     stat_role_k: "Current role",
-    stat_role_v: "CyberOps Consultant",
+    stat_role_v: "CyberOps Consultant (Horangi/Bitdefender)",
     stat_since_k: "Since",
     stat_since_v: "2019",
     stat_deliver_k: "Deliverable",
     stat_deliver_v: "Actionable reports",
     profile_kicker: "PROFILE",
     profile_pill: "Available",
-    profile_subtitle: "CyberOps Consultant — Offensive Security (Web · API · Mobile · Network)",
+    profile_subtitle: "CyberOps Consultant at Horangi Cyber Security (Bitdefender) — Offensive Security (Web · API · Mobile · Network)",
     kv_email_k: "Email",
     kv_tools_k: "Skills",
     kv_tools_v: "Burp Suite · Postman · Nessus · Frida · Objection",
@@ -52,10 +53,14 @@ const i18n = {
     skills_d1: "Clear severity and remediation guidance",
     skills_d2: "Executive summary + technical detail",
     skills_d3: "Stakeholder-ready presentation of findings",
+    projects_title: "Projects",
+    projects_sub: "Selected open-source work from GitHub.",
+    projects_note: "Live data loads from the GitHub API. If it can’t load, you’ll still see a curated snapshot.",
+    projects_view: "View on GitHub",
     exp_title: "Experience",
     exp_sub: "Roles and responsibilities (from CV).",
     exp_r1: "CyberOps Consultant",
-    exp_t1: "Oct 2021 — Present",
+    exp_t1: "Oct 2021 — Present · Horangi Cyber Security (Bitdefender)",
     exp1_1: "Perform Web, Mobile (Android & iOS), Network and API penetration testing and vulnerability assessment.",
     exp1_2: "Perform static analysis on mobile devices.",
     exp1_3: "Prepare detailed technical reports based on testing results.",
@@ -108,22 +113,23 @@ const i18n = {
     nav_experience: "Pengalaman",
     nav_certs: "Sertifikasi",
     nav_contact: "Kontak",
+    nav_projects: "Proyek",
     hero_eyebrow: "OFFENSIVE SECURITY · LAPORAN JELAS",
     hero_title_a: "Offensive security.",
     hero_title_b: "Pelaporan yang jelas dan dapat ditindaklanjuti.",
     hero_lead:
-      "Saya Sal Scar, Konsultan CyberOps dengan fokus pada offensive security. Saya melakukan pengujian penetrasi & asesmen kerentanan untuk Web, API, Mobile (Android & iOS), dan Network, termasuk analisis statis aplikasi mobile — dengan laporan teknis siap klien.",
+      "Saya Salma Putri (Sal Scar), Konsultan CyberOps dengan fokus pada offensive security. Saya melakukan pengujian penetrasi & asesmen kerentanan untuk Web, API, Mobile (Android & iOS), dan Network, termasuk analisis statis aplikasi mobile — dengan laporan teknis siap klien.",
     cta_experience: "Lihat pengalaman",
     cta_contact: "Kontak",
     stat_role_k: "Peran saat ini",
-    stat_role_v: "Konsultan CyberOps",
+    stat_role_v: "Konsultan CyberOps (Horangi/Bitdefender)",
     stat_since_k: "Sejak",
     stat_since_v: "2019",
     stat_deliver_k: "Hasil",
     stat_deliver_v: "Laporan yang dapat ditindaklanjuti",
     profile_kicker: "PROFIL",
     profile_pill: "Tersedia",
-    profile_subtitle: "Konsultan CyberOps — Offensive Security (Web · API · Mobile · Network)",
+    profile_subtitle: "Konsultan CyberOps di Horangi Cyber Security (Bitdefender) — Offensive Security (Web · API · Mobile · Network)",
     kv_email_k: "Email",
     kv_tools_k: "Keahlian",
     kv_tools_v: "Burp Suite · Postman · Nessus · Frida · Objection",
@@ -153,10 +159,14 @@ const i18n = {
     skills_d1: "Severity jelas dan panduan perbaikan",
     skills_d2: "Ringkasan eksekutif + detail teknis",
     skills_d3: "Penyajian temuan siap stakeholder",
+    projects_title: "Proyek",
+    projects_sub: "Karya open-source pilihan dari GitHub.",
+    projects_note: "Data dimuat langsung dari GitHub API. Jika gagal, Anda tetap melihat snapshot kurasi.",
+    projects_view: "Lihat di GitHub",
     exp_title: "Pengalaman",
     exp_sub: "Peran dan tanggung jawab (dari CV).",
     exp_r1: "Konsultan CyberOps",
-    exp_t1: "Okt 2021 — Sekarang",
+    exp_t1: "Okt 2021 — Sekarang · Horangi Cyber Security (Bitdefender)",
     exp1_1: "Melakukan pengujian penetrasi dan asesmen kerentanan untuk Web, Mobile (Android & iOS), Network, dan API.",
     exp1_2: "Melakukan analisis statis pada perangkat/aplikasi mobile.",
     exp1_3: "Menyusun laporan teknis detail berdasarkan hasil pengujian.",
@@ -303,6 +313,70 @@ function setupCopyables(){
   });
 }
 
+
+async function fetchGitHubProjects(){
+  const grid = qs("#projectsGrid");
+  if(!grid) return;
+
+  const wanted = ["session-burner","frida-bypass-automation","medusa"];
+
+  try{
+    const res = await fetch("https://api.github.com/users/sal-scar/repos?per_page=100", {
+      headers: { "Accept": "application/vnd.github+json" }
+    });
+    if(!res.ok) throw new Error("GitHub API error");
+    const repos = await res.json();
+
+    const byName = new Map(repos.map(r => [r.name, r]));
+    const cards = wanted
+      .map(name => byName.get(name))
+      .filter(Boolean)
+      .map(r => ({
+        name: r.name,
+        url: r.html_url,
+        desc: r.description || "",
+        lang: r.language || "—",
+        stars: typeof r.stargazers_count === "number" ? r.stargazers_count : 0,
+        license: (r.license && r.license.spdx_id && r.license.spdx_id !== "NOASSERTION") ? r.license.spdx_id : "—"
+      }));
+
+    if(!cards.length) return;
+
+    // Replace content (keep styling)
+    const dict = i18n[getLang()] || i18n.en;
+    grid.innerHTML = "";
+    cards.forEach(c => {
+      const el = document.createElement("article");
+      el.className = "card project";
+      el.innerHTML = `
+        <div class="project-top">
+          <h3 class="h3">${escapeHtml(c.name)}</h3>
+          <span class="pill mono">${escapeHtml(c.lang)}</span>
+        </div>
+        <p class="muted">${escapeHtml(c.desc)}</p>
+        <div class="project-meta mono">
+          <span aria-label="Stars">★ ${c.stars}</span>
+          <span>${escapeHtml(c.license)}</span>
+        </div>
+        <a class="textlink" href="${c.url}" target="_blank" rel="noreferrer noopener">${escapeHtml(dict.projects_view || "View on GitHub")}</a>
+      `;
+      grid.appendChild(el);
+    });
+  }catch{
+    // fallback already in HTML
+  }
+}
+
+function escapeHtml(str){
+  return String(str)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const theme = getTheme();
   const lang = getLang();
@@ -310,6 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme(theme, false);
   applyLang(lang);
   setupCopyables();
+  fetchGitHubProjects();
 
   const themeBtn = qs("#themeToggle");
   if(themeBtn){
@@ -324,6 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
     langBtn.addEventListener("click", () => {
       const next = (getLang() === "en") ? "id" : "en";
       applyLang(next);
+      fetchGitHubProjects();
     });
   }
 });

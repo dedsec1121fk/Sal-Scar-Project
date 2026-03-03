@@ -4,9 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="dark light" />
-  <title>Sal Scar — CyberOps Consultant</title>
-  <meta name="description" content="Black & white portfolio — Sal Scar, CyberOps Consultant. Web, API, Mobile, and Network security testing with clear reporting." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Salma Putri (Sal Scar) — CyberOps Consultant</title>
+  <meta name="description" content="Salma Putri (Sal Scar) — CyberOps Consultant at Horangi Cyber Security (Bitdefender). Offensive security: Web, API, Mobile (Android/iOS), and Network penetration testing with clear, actionable reporting." />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Salma Putri (Sal Scar) — CyberOps Consultant" />
+  <meta property="og:description" content="Offensive security across Web, API, Mobile (Android/iOS), and Networks — with clear, actionable reporting." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Salma Putri (Sal Scar) — CyberOps Consultant" />
+  <meta name="twitter:description" content="Offensive security across Web, API, Mobile (Android/iOS), and Networks — with clear, actionable reporting." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body id="top">
@@ -15,14 +29,15 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-name">SAL SCAR</span>
+        <span class="brand-name">SALMA PUTRI</span>
         <span class="brand-role" data-i18n="brand_role">CYBEROPS CONSULTANT</span>
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#skills" data-i18n="nav_skills">Skills</a>
-        <a href="#experience" data-i18n="nav_experience">Experience</a>
+                <a href="#projects" data-i18n="nav_projects">Projects</a>
+<a href="#experience" data-i18n="nav_experience">Experience</a>
         <a href="#certs" data-i18n="nav_certs">Certifications</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
@@ -50,7 +65,7 @@
           </h1>
 
           <p class="lead" data-i18n="hero_lead">
-            I’m Sal Scar, a CyberOps Consultant specializing in offensive security.
+            I’m Salma Putri (Sal Scar), a CyberOps Consultant specializing in offensive security.
             I perform Web, API, Mobile (Android &amp; iOS), and Network penetration testing &amp; vulnerability assessment,
             including mobile static analysis — with client-ready technical reporting.
           </p>
@@ -64,7 +79,7 @@
           <dl class="stats" aria-label="Highlights">
             <div class="stat">
               <dt data-i18n="stat_role_k">Current role</dt>
-              <dd data-i18n="stat_role_v">CyberOps Consultant</dd>
+              <dd data-i18n="stat_role_v">CyberOps Consultant (Horangi/Bitdefender)</dd>
             </div>
             <div class="stat">
               <dt data-i18n="stat_since_k">Since</dt>
@@ -83,10 +98,12 @@
               <p class="kicker" data-i18n="profile_kicker">PROFILE</p>
               <span class="pill mono" data-i18n="profile_pill">Available</span>
             </div>
+            <div class="profile-media" aria-hidden="true"><img class="avatar" src="assets/avatar.jpg" alt="" loading="lazy" decoding="async" /></div>
 
-            <h2 class="card-title">Sal Scar</h2>
+
+            <h2 class="card-title">Salma Putri <span class="muted mono">(Sal Scar)</span></h2>
             <p class="muted" data-i18n="profile_subtitle">
-              CyberOps Consultant — Offensive Security (Web · API · Mobile · Network)
+              CyberOps Consultant at Horangi Cyber Security (Bitdefender) — Offensive Security (Web · API · Mobile · Network)
             </p>
 
             <div class="divider" role="presentation"></div>
@@ -200,7 +217,7 @@
           <div class="tl-item" role="listitem">
             <div class="tl-meta">
               <p class="tl-role" data-i18n="exp_r1">CyberOps Consultant</p>
-              <p class="tl-time mono" data-i18n="exp_t1">Oct 2021 — Present</p>
+              <p class="tl-time mono" data-i18n="exp_t1">Oct 2021 — Present · Horangi Cyber Security (Bitdefender)</p>
             </div>
             <div class="tl-body card">
               <ul class="bullets">
@@ -243,6 +260,68 @@
         </div>
       </div>
     </section>
+
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2" data-i18n="projects_title">Projects</h2>
+          <p class="sub" data-i18n="projects_sub">Selected open-source work from GitHub.</p>
+        </div>
+
+        <div class="projects-head">
+          <p class="muted" data-i18n="projects_note">
+            Live data loads from the GitHub API. If it can’t load, you’ll still see a curated snapshot.
+          </p>
+          <div class="projects-links">
+            <a class="btn" href="https://github.com/sal-scar" target="_blank" rel="noreferrer noopener">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/salmaputriw" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <div id="projectsGrid" class="grid-3">
+          <article class="card project" data-fallback="1">
+            <div class="project-top">
+              <h3 class="h3">session-burner</h3>
+              <span class="pill mono">Shell</span>
+            </div>
+            <p class="muted">A speed-first Tor burner browsing launcher for Linux systems that can’t run Tor Browser.</p>
+            <div class="project-meta mono">
+              <span aria-label="Stars">★ 7</span>
+              <span>MIT</span>
+            </div>
+            <a class="textlink" href="https://github.com/sal-scar/session-burner" target="_blank" rel="noreferrer noopener" data-i18n="projects_view">View on GitHub</a>
+          </article>
+
+          <article class="card project" data-fallback="1">
+            <div class="project-top">
+              <h3 class="h3">frida-bypass-automation</h3>
+              <span class="pill mono">Python</span>
+            </div>
+            <p class="muted">Automates testing Frida scripts to bypass root detection &amp; SSL pinning in mobile apps.</p>
+            <div class="project-meta mono">
+              <span aria-label="Stars">★ 5</span>
+              <span>—</span>
+            </div>
+            <a class="textlink" href="https://github.com/sal-scar/frida-bypass-automation" target="_blank" rel="noreferrer noopener" data-i18n="projects_view">View on GitHub</a>
+          </article>
+
+          <article class="card project" data-fallback="1">
+            <div class="project-top">
+              <h3 class="h3">medusa</h3>
+              <span class="pill mono">Shell</span>
+            </div>
+            <p class="muted">Demonstrates network-based resource exhaustion risks in certain IoT cameras (AltoBeam/V380).</p>
+            <div class="project-meta mono">
+              <span aria-label="Stars">★ 4</span>
+              <span>MIT</span>
+            </div>
+            <a class="textlink" href="https://github.com/sal-scar/medusa" target="_blank" rel="noreferrer noopener" data-i18n="projects_view">View on GitHub</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
 
     <section id="certs" class="section alt">
       <div class="container">
