@@ -146,7 +146,7 @@ a:focus-visible, button:focus-visible, .copyable:focus-visible{
 }
 .iconbtn:hover{background: var(--card2)}
 .iconbtn .icon{font-family: var(--mono); font-size: 1.12rem; line-height: 1}
-.iconbtn .lang{font-family: var(--mono); font-weight: 900; letter-spacing: .08em}
+.iconbtn .lang{font-family: var(--mono); font-weight: 800; letter-spacing: .04em; font-size: .9rem}
 .hero{
   padding: 3.2rem 0 2.2rem;
 }
@@ -469,11 +469,25 @@ a:focus-visible, button:focus-visible, .copyable:focus-visible{
 }
 @media (max-width: 560px){
   .container{width: min(var(--container), calc(100% - 1.4rem))}
-  .header-inner{flex-wrap: wrap}
-  .brand{min-width: unset}
+  .header-inner{flex-wrap: wrap; gap: .6rem .75rem; padding: .8rem 0 .65rem}
+  .brand{min-width: 0; flex: 1; order: 1}
+  .brand-name{font-size: .88rem}
   .brand-role{display:none}
+  .controls{order: 2; margin-left: auto}
+  .nav{
+    order: 3;
+    flex: 0 0 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: .15rem;
+  }
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{white-space: nowrap; padding: .48rem .62rem}
   .grid-2{grid-template-columns: 1fr}
-  .section-head{flex-direction: column; align-items:flex-start}  .projects-head{flex-direction: column; align-items:flex-start}
+  .section-head{flex-direction: column; align-items:flex-start}
+  .projects-head{flex-direction: column; align-items:flex-start}
 
 }
 @media (prefers-reduced-motion: reduce){

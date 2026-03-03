@@ -259,7 +259,7 @@ function applyLang(lang){
   });
 
   const langLabel = qs("#langLabel");
-  if(langLabel) langLabel.textContent = (lang === "en") ? "ID" : "EN";
+  if(langLabel) langLabel.textContent = (lang === "en") ? "Indonesia" : "English";
   localStorage.setItem("lang", lang);
 }
 
