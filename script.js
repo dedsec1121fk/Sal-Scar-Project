@@ -2,6 +2,9 @@ const i18n = {
   en: {
     skip: "Skip to content",
     brand_role: "CYBEROPS CONSULTANT",
+    meta_title: "Sal Scar — CyberOps Consultant",
+    meta_desc: "Sal Scar — CyberOps Consultant at Horangi Cyber Security (Bitdefender). Offensive security: Web, API, Mobile (Android/iOS), and Network penetration testing with client-ready technical reporting.",
+    meta_og_desc: "Offensive security across Web, API, Mobile (Android/iOS), and Networks — with client-ready technical reporting.",
     nav_about: "About",
     nav_skills: "Skills",
     nav_experience: "Experience",
@@ -56,6 +59,9 @@ const i18n = {
     projects_sub: "Selected open-source work from GitHub.",
     projects_note: "Live data loads from the GitHub API. If it can’t load, you’ll still see a curated snapshot.",
     projects_view: "View on GitHub",
+    proj_session_desc: "A speed-first Tor burner browsing launcher for Linux systems that can’t run Tor Browser.",
+    proj_frida_desc: "Automates testing Frida scripts to bypass root detection & SSL pinning in mobile apps.",
+    proj_medusa_desc: "Demonstrates network-based resource exhaustion risks in certain IoT cameras (AltoBeam/V380).",
     exp_title: "Experience",
     exp_sub: "Roles and responsibilities (from CV).",
     exp_r1: "CyberOps Consultant",
@@ -107,16 +113,19 @@ const i18n = {
   id: {
     skip: "Lewati ke konten",
     brand_role: "KONSULTAN CYBEROPS",
+    meta_title: "Sal Scar — Konsultan CyberOps",
+    meta_desc: "Sal Scar — Konsultan CyberOps di Horangi Cyber Security (Bitdefender). Keamanan ofensif untuk Web, API, Mobile (Android/iOS), dan Network dengan laporan teknis siap klien.",
+    meta_og_desc: "Keamanan ofensif untuk Web, API, Mobile (Android/iOS), dan Network — dengan laporan teknis siap klien.",
     nav_about: "Tentang",
     nav_skills: "Keahlian",
     nav_experience: "Pengalaman",
     nav_certs: "Sertifikasi",
     nav_contact: "Kontak",
     nav_projects: "Proyek",
-    hero_eyebrow: "OFFENSIVE SECURITY · SECURITY TESTING",
-    hero_title_a: "Offensive security.",
+    hero_eyebrow: "KEAMANAN OFENSIF · PENGUJIAN KEAMANAN",
+    hero_title_a: "Keamanan ofensif.",
     hero_title_b: "",
-    hero_lead: "I’m Sal Scar, a CyberOps Consultant specializing in offensive security. I perform Web, API, Mobile (Android & iOS), and Network penetration testing & vulnerability assessment, including mobile static analysis — with client-ready technical reporting.",
+    hero_lead: "Saya Sal Scar, Konsultan CyberOps yang berfokus pada keamanan ofensif. Saya melakukan pengujian penetrasi dan asesmen kerentanan untuk Web, API, Mobile (Android & iOS), serta Network—termasuk analisis statis aplikasi mobile—dengan laporan teknis siap klien.",
     cta_experience: "Lihat pengalaman",
     cta_contact: "Kontak",
     stat_role_k: "Peran saat ini",
@@ -127,14 +136,14 @@ const i18n = {
     stat_deliver_v: "Laporan teknis",
     profile_kicker: "PROFIL",
     profile_pill: "Tersedia",
-    profile_subtitle: "Konsultan CyberOps di Horangi Cyber Security (Bitdefender) — Offensive Security (Web · API · Mobile · Network)",
+    profile_subtitle: "Konsultan CyberOps di Horangi Cyber Security (Bitdefender) — Keamanan ofensif (Web · API · Mobile · Network)",
     kv_email_k: "Email",
     kv_tools_k: "Keahlian",
     kv_tools_v: "Burp Suite · Postman · Nessus · Frida · Objection",
     profile_note: "Fokus pada dampak nyata, bukti yang jelas, dan panduan perbaikan yang bisa ditindaklanjuti.",
     about_title: "Tentang",
     about_sub: "Apa yang saya lakukan dan apa yang bisa Anda harapkan.",
-    about_h3_1: "Engagement",
+    about_h3_1: "Keterlibatan",
     about_p_1:
       "Saya melakukan pengujian penetrasi dan asesmen kerentanan pada aplikasi web, API, aplikasi mobile (Android & iOS), dan jaringan. Jika diperlukan, saya juga melakukan analisis statis pada aplikasi mobile.",
     about_h3_2: "Pelaporan & komunikasi",
@@ -161,6 +170,9 @@ const i18n = {
     projects_sub: "Karya open-source pilihan dari GitHub.",
     projects_note: "Data dimuat langsung dari GitHub API. Jika gagal, Anda tetap melihat snapshot kurasi.",
     projects_view: "Lihat di GitHub",
+    proj_session_desc: "Launcher browsing Tor burner yang cepat untuk sistem Linux yang tidak bisa menjalankan Tor Browser.",
+    proj_frida_desc: "Mengotomatiskan pengujian skrip Frida untuk bypass deteksi root & SSL pinning pada aplikasi mobile.",
+    proj_medusa_desc: "Mendemonstrasikan risiko resource exhaustion berbasis jaringan pada beberapa kamera IoT (AltoBeam/V380).",
     exp_title: "Pengalaman",
     exp_sub: "Peran dan tanggung jawab (dari CV).",
     exp_r1: "Konsultan CyberOps",
@@ -201,7 +213,7 @@ const i18n = {
     availability_title: "Ketersediaan",
     availability_text:
       "Biasanya saya bisa mulai dalam 1–2 minggu tergantung scope. Retest cepat tersedia saat perbaikan sudah siap.",
-    deliverables_title: "DELIVERABLES",
+    deliverables_title: "HASIL YANG DIBERIKAN",
     deliv_li_1: "Ringkasan eksekutif + detail teknis",
     deliv_li_2: "Langkah reproduksi dan bukti",
     deliv_li_3: "Panduan perbaikan dan catatan retest",
@@ -249,6 +261,22 @@ function applyLang(lang){
     if(!key) return;
     if(dict[key] !== undefined) el.textContent = dict[key];
   });
+
+
+  // Update document title + social meta for better previews per language
+  if(dict.meta_title) document.title = dict.meta_title;
+  const md = document.querySelector('meta[name="description"]');
+  if(md && dict.meta_desc) md.setAttribute("content", dict.meta_desc);
+
+  const ogt = document.querySelector('meta[property="og:title"]');
+  if(ogt && dict.meta_title) ogt.setAttribute("content", dict.meta_title);
+  const ogd = document.querySelector('meta[property="og:description"]');
+  if(ogd && (dict.meta_og_desc || dict.meta_desc)) ogd.setAttribute("content", dict.meta_og_desc || dict.meta_desc);
+
+  const twt = document.querySelector('meta[name="twitter:title"]');
+  if(twt && dict.meta_title) twt.setAttribute("content", dict.meta_title);
+  const twd = document.querySelector('meta[name="twitter:description"]');
+  if(twd && (dict.meta_og_desc || dict.meta_desc)) twd.setAttribute("content", dict.meta_og_desc || dict.meta_desc);
 
   qsa("[data-i18n-title]").forEach(el => {
     const key = el.getAttribute("data-i18n-title");
